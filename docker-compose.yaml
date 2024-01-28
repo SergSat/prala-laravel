@@ -39,6 +39,7 @@ services:
     database:
         image: mysql:8.0
         volumes:
+            - .:/var/www
             - dbdata:/var/lib/mysql
             - ./docker/.bashrc:/root/.bashrc
         environment:
