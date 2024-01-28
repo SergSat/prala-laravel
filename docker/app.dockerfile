@@ -11,9 +11,12 @@ RUN apt-get update && apt-get install -y  \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Copy existing application directory contents to the working directory
-COPY . /var/www/html
+COPY . /var/www
 
 # Assign permissions of the working directory to the www-data user
-RUN chown -R www-data:www-data \
-        /var/www/html/storage \
-        /var/www/html/bootstrap/cache
+RUN chown -R www-data:www-data  \
+    /var/www
+
+RUN chmod -R 775 \
+    /var/www/storage \
+    /var/www/bootstrap/cache

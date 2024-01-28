@@ -1,0 +1,26 @@
+name: Deploy to Stage - DigitalOcean
+
+on:
+  push:
+    branches:
+      - dev
+
+env:
+  SERVER_IP: 139.59.214.96
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.1
+        with:
+          ssh-private-key: ${{ secrets.PRIVATE_SSH_KEY }}
+
+      - name: Deploy to server and restart docker
+        run: |
+          ssh -o StrictHostKeyChecking=no root@${{env.SERVER_IP}} "cd /var/www/prala && git pull origin dev && docker-compose exec -T app composer install --no-dev --optimize-autoloader && docker-compose -f docker-compose.yaml down && docker-compose -f docker-compose.yaml up -d && npm install && npm run build"
