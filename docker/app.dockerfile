@@ -14,6 +14,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 COPY . /var/www
 
 # Assign permissions of the working directory to the www-data user
-RUN chown -R www-data:www-data /var/www \
-        /var/www/storage \
-        /var/www/bootstrap/cache
+RUN chown -R www-data:www-data  \
+    /var/www
+
+RUN chmod -R 775 \
+    /var/www/storage \
+    /var/www/bootstrap/cache
