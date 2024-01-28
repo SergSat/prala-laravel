@@ -17,3 +17,7 @@
 .--pr-active {
     @apply underline underline-offset-2 text-pr-blue
 }
+
+.ggg {
+    color: red;
+}
