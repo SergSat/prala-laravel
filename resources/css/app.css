@@ -2,44 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
-}
-
-.rating input[type='radio'] {
-    display: none;
-}
-
-.rating label {
-    direction: ltr;
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background-image: url('/src/img/starempty.svg');
-    background-size: cover;
-    cursor: pointer;
-}
-
-.rating input[type='radio']:checked ~ label {
-    direction: ltr;
-    background-image: url('/src/img/starfull.svg');
-}
-
 .--pr-success {
-    @apply border border-green-deep text-green-deep;
+    @apply border border-pr-green text-pr-green;
 }
 
 .--pr-success p::before {
-    @apply bg-green-deep
+    @apply bg-pr-green
 }
 
 .--pr-abs-pos-center {

@@ -12,16 +12,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        'black-soft': '#1F1F1F',
-        'blue-deep': '#0038FF',
-        'blueviolet': '#8a2be2',
-        'blue-sky': '#F0F0FC',
-        'beige': '#E8E3DF',
-        'brown-gray': '#9A8585',
-        'gray-soft': '#D9D9D9',
-        'gray-sky': '#A4B5E1',
-        'green-deep': '#17DA13',
-        'green-light': '#98FF96',
+        'pr-black-soft': '#1F1F1F',
+        'pr-blue': '#0038FF',
+        'pr-blueviolet': '#8a2be2',
+        'pr-blue-sky': '#F0F0FC',
+        'pr-beige': '#E8E3DF',
+        'pr-brown-gray': '#9A8585',
+        'pr-gray-soft': '#D9D9D9',
+        'pr-gray-sky': '#A4B5E1',
+        'pr-green': '#17DA13',
+        'pr-green-light': '#98FF96',
       },
       blur: {
         xs: '2px',
