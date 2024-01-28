@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Prala</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -15,7 +15,7 @@
 </head>
 <body class="font-light scroll-smooth">
 <div class="relative flex h-min">
-    <div class="w-full lg:w-3/4 bg-pr-blue-sky p-5">
+    <div class="w-full lg:w-3/4 bg-pr-beige md:bg-pr-blue-sky p-5">
 
         <!-- Header -->
         @include('parts.header')

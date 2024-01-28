@@ -17,7 +17,7 @@
 <body class="font-light">
     <div class="w-full h-dvh bg-no-repeat bg-center bg-cover"
         style="background-image: url({{ Vite::asset('resources/images/enter.png') }});">
-        <div class="w-1/3 h-dvh mx-auto flex flex-col">
+        <div class="max-w-[648px] h-dvh mx-auto flex flex-col">
             <img width="350" height="101" src="{{ Vite::asset('resources/images/logopralabig.png') }}" alt="logo-prala" class="mx-auto mt-16">
             <hr class="h-px mt-14 bg-white border-0">
             <div class="text-center text-white mt-2">
@@ -34,7 +34,7 @@
                     </div>
 
                     <div
-                        class="w-28 h-28 md:w-20 md:h-20 lg:w-52 lg:h-52 grid place-items-center bg-white rounded-full">
+                        class="w-28 h-28 shrink-0 md:w-20 md:h-20 lg:w-52 lg:h-52 grid place-items-center bg-white rounded-full">
                         <div class="w-full h-full rounded-full group grid place-content-center">
                             <a href="#"
                                 class="justify-self-center text-xl lg:text-3xl tracking-wider font-extralight text-blue-deep group-hover:text-blueviolet transition-colors duration-300">
