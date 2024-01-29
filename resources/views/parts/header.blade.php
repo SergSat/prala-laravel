@@ -16,13 +16,7 @@
 
     {{-- Desctop navigation --}}
     <nav class="hidden lg:block">
-        <ul class="
-                flex 
-                md:gap-4 
-                xl:gap-7 
-                py-4 
-                text-base 
-            ">
+        <ul class="flex md:gap-4 xl:gap-7 py-4 text-base">
             <li><a href="#" class="--pr-active">Кабінет</a></li>
             <li><a href="#">Бібліотека</a></li>
             <li><a href="#">Налаштування</a></li>

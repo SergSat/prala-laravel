@@ -4,19 +4,12 @@
 <article class="w-full lg:pt-24 grid grid-cols-1 lg:grid-cols-2 grid-flow-row gap-5">
     <h1 class="sr-only">Мої завдання, навчання та новини</h1>
 
-    <div class="mx-auto mt-10 w-full lg:hidden">
-        <div class="flex items-center justify-around sm:justify-center gap-x-5 sm:gap-x-12">
+    <div class="mx-auto mt-10 lg:hidden">
+        <div class="flex items-center">
             <img src="{{ Vite::asset('resources/images/photo-model.png') }}" alt="avatar">
-            <div class="flex flex-col items-center">
-                <h3 class="text-2xl">Анастасія</h3>
-                <p class="mt-1 text-stone-500 font-extralight">Кулінарний геній</p>
-                <div class="w-3/4 flex items-center justify-between mt-3">
-                    <img class="w-5 h-5" src="{{ Vite::asset('resources/images/starfull.svg') }}" alt="star">
-                    <img class="w-5 h-5" src="{{ Vite::asset('resources/images/starempty.svg') }}" alt="star">
-                    <img class="w-5 h-5" src="{{ Vite::asset('resources/images/starempty.svg') }}" alt="star">
-                    <img class="w-5 h-5" src="{{ Vite::asset('resources/images/starempty.svg') }}" alt="star">
-                </div>
-            </div>
+        </div>
+        <div>
+
         </div>
     </div>
 
@@ -24,7 +17,7 @@
     <section class="mx-auto lg:mx-0 flex flex-col">
         <h3 class="text-xl lg:text-2xl text-pr-blue pl-5 pt-5">Мої завдання</h3>
         <div
-            class="max-w-xl min-w-16 mt-5 p-5 flex max-[320px]:flex-col items-center justify-between gap-4 bg-white rounded-md drop-shadow-lg">
+            class="max-w-xl min-w-16 mt-5 p-5 flex items-center justify-between gap-4 bg-white rounded-md      drop-shadow-lg">
             <p
                 class="text-sm sm:text-base text-balance flex items-center 
                 before:mr-2 before:block before:content-[''] before:w-2.5 before:h-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft">
@@ -35,7 +28,7 @@
         </div>
 
         <div
-            class="--pr-success max-w-xl min-w-16 mt-5 p-5 flex max-[320px]:flex-col items-center justify-between gap-4 bg-white rounded-md drop-shadow-lg">
+            class="--pr-success max-w-xl min-w-16 mt-5 p-5 flex items-center justify-between bg-white rounded-md drop-shadow-lg">
             <p
                 class="text-sm sm:text-base text-balance flex items-center before:mr-2 before:block before:content-['']  before:w-2.5 before:h-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft">
                 Тест “Массажист Стоп Начальника”
@@ -43,8 +36,7 @@
             <p class="text-sm sm:text-base whitespace-nowrap">Завершено</p>
         </div>
 
-        <div
-            class="max-w-xl min-w-16 mt-5 p-5 flex max-[320px]:flex-col items-center justify-between gap-4 bg-white rounded-md drop-shadow-lg">
+        <div class="max-w-xl min-w-16 mt-5 flex items-center justify-between bg-white rounded-md p-5 drop-shadow-lg">
             <p
                 class="text-sm sm:text-base text-balance flex items-center before:mr-2 before:block before:content-[''] before:w-2.5 before:h-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft">
                 Тест “Массажист Стоп Начальника”
@@ -53,7 +45,7 @@
         </div>
 
         <div
-            class="--pr-success max-w-xl min-w-16 mt-5 p-5 flex max-[320px]:flex-col items-center justify-between gap-4 bg-white rounded-md drop-shadow-lg">
+            class="--pr-success max-w-xl min-w-16 mt-5 flex items-center justify-between bg-white rounded-md p-5 drop-shadow-lg">
             <div class="flex items-center">
                 <p
                     class="text-sm sm:text-base text-balance flex items-center before:mr-2 before:block before:content-[''] before:w-2.5 before:h-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft">
@@ -64,7 +56,7 @@
         </div>
 
         <div
-            class="--pr-success max-w-xl min-w-16 mt-5 p-5 flex max-[320px]:flex-col items-center justify-between gap-4 bg-white rounded-md drop-shadow-lg">
+            class="--pr-success max-w-xl min-w-16 mt-5 flex items-center justify-between bg-white rounded-md p-5 drop-shadow-lg">
             <div class="flex items-center">
                 <p
                     class="text-sm sm:text-base text-balance flex items-center before:mr-2 before:block before:content-[''] before:w-2.5 before:h-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft">
@@ -74,8 +66,7 @@
             <p class="text-sm sm:text-base whitespace-nowrap">Завершено</p>
         </div>
 
-        <div
-            class="max-w-xl min-w-16 mt-5 p-5 flex max-[320px]:flex-col items-center justify-between gap-4 bg-white rounded-md drop-shadow-lg">
+        <div class="max-w-xl min-w-16 mt-5 flex items-center justify-between bg-white rounded-md p-5 drop-shadow-lg">
             <p
                 class="text-sm sm:text-base text-balance flex items-center before:mr-2 before:block before:content-[''] before:w-2.5 before:h-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft">
                 Тест “Массажист Стоп Начальника”
@@ -83,8 +74,7 @@
             <p class="text-sm sm:text-base whitespace-nowrap">В очікуванні</p>
         </div>
 
-        <div
-            class="max-w-xl min-w-16 mt-5 p-5 flex max-[320px]:flex-col items-center justify-between gap-4 bg-white rounded-md drop-shadow-lg">
+        <div class="max-w-xl min-w-16 mt-5 flex items-center justify-between bg-white rounded-md p-5 drop-shadow-lg">
             <p
                 class="text-sm sm:text-base text-balance flex items-center before:mr-2 before:block before:content-[''] before:w-2.5 before:h-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft">
                 Тест “Массажист Стоп Начальника”
