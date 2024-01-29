@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,21 +14,23 @@
     <!-- Stylesheet -->
     @vite('resources/css/app.css')
 </head>
+
 <body class="font-light scroll-smooth">
-<div class="relative flex h-min">
-    <div class="w-full lg:w-3/4 bg-pr-beige md:bg-pr-blue-sky p-5">
+    <div class="relative flex h-min">
+        <div class="w-full lg:w-3/4 bg-pr-beige lg:bg-pr-blue-sky p-5">
 
-        <!-- Header -->
-        @include('parts.header')
+            <!-- Header -->
+            @include('parts.header')
 
-        <!-- Main -->
-        <main>
-            @yield('content')
-        </main>
+            <!-- Main -->
+            <main>
+                @yield('content')
+            </main>
+        </div>
+
+        <!-- Sidebar -->
+        @include('parts.sidebar')
     </div>
-
-    <!-- Sidebar -->
-    @include('parts.sidebar')
-</div>
 </body>
+
 </html>
