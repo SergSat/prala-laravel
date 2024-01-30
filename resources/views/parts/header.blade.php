@@ -2,9 +2,9 @@
     <section class="relative py-5 lg:hidden">
         <img class="mx-auto" src="{{ Vite::asset('resources/images/logo-prala.png') }}" alt="logo-prala">
         <button id="hamburger-button"
-            class="absolute w-14 right-5 top-1/2 transform -translate-y-1/2 text-4xl text-pr-blue cursor-pointer w-8 h-8">
+            class="absolute w-14 h-8 right-5 top-1/2 transform -translate-y-1/2 text-4xl text-pr-blue cursor-pointer">
             <span
-                class="bg-pr-blue w-8 h-1 rounded absolute top-4 right-5 -mt-0.5 transition-all duration-500 drop-shadow before:content-[''] before:bg-pr-blue before:w-8 before:h-1 before:absolute before:rounded before:-translate-x-4 before:-translate-y-2.5 before:transition-all before:duration-500 before:drop-shadow after:bg-pr-blue after:w-8 after:h-1 after:absolute after:rounded after:-translate-x-4 after:translate-y-2.5 after:transition-all after:duration-500 after:drop-shadow"></span>
+                class="bg-pr-blue w-8 h-1 rounded absolute top-4 right-1 sm:right-4 -mt-0.5 transition-all duration-500 drop-shadow before:content-[''] before:bg-pr-blue before:w-8 before:h-1 before:absolute before:rounded before:-translate-x-4 before:-translate-y-2.5 before:transition-all before:duration-500 before:drop-shadow after:bg-pr-blue after:w-8 after:h-1 after:absolute after:rounded after:-translate-x-4 after:translate-y-2.5 after:transition-all after:duration-500 after:drop-shadow"></span>
         </button>
     </section>
     <section id="mobile-menu"
