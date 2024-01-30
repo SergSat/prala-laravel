@@ -17,13 +17,13 @@
 
 <body class="font-light scroll-smooth">
     <div class="relative flex h-min">
-        <div class="w-full lg:w-3/4 bg-pr-beige lg:bg-pr-blue-sky p-5">
+        <div class="w-full lg:w-3/4 bg-pr-beige lg:bg-pr-blue-sky">
 
             <!-- Header -->
             @include('parts.header')
 
             <!-- Main -->
-            <main>
+            <main class="px-5">
                 @yield('content')
             </main>
         </div>

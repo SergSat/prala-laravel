@@ -1,34 +1,8 @@
-<aside class="
-        lg:w-1/4
-        fixed 
-        inset-y-0 
-        right-0 
-        py-7 
-        min-h-screen 
-        bg-pr-beige 
-        flex 
-        flex-col 
-        items-center 
-        justify-between 
-        transform 
-        translate-x-full 
-        lg:translate-x-0 
-        transition 
-        duration-300 
-        ease-linear
-    ">
+<aside
+    class="lg:w-1/4 fixed inset-y-0 right-0 py-7 min-h-screen bg-pr-beige flex flex-col items-center justify-between transform translate-x-full lg:translate-x-0 transition duration-300 ease-linear">
     <img src="{{ Vite::asset('resources/images/logo-prala.png') }}" alt="logo-prala">
 
-    <section class="
-            w-3/4 
-            py-10 
-            flex 
-            flex-col 
-            items-center 
-            border 
-            border-pr-gray-sky 
-            rounded-lg
-        ">
+    <section class="w-3/4 py-10 flex flex-col items-center border border-pr-gray-sky rounded-lg">
         <img src="{{ Vite::asset('resources/images/photo-model.png') }}" alt="avatar">
         <div class="flex flex-col items-center">
             <h3 class="text-2xl pt-6">Анастасія</h3>
@@ -42,12 +16,7 @@
         </div>
     </section>
 
-    <section class="
-            flex 
-            items-center 
-            justify-center 
-            p-10
-        ">
+    <section class="flex items-center justify-center p-10">
         Calendar
     </section>
 </aside>

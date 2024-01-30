@@ -26,8 +26,7 @@
         <div
             class="max-w-xl min-w-16 mt-5 p-5 flex max-[320px]:flex-col items-center justify-between gap-4 bg-white rounded-md drop-shadow-lg">
             <p
-                class="text-sm sm:text-base text-balance flex items-center 
-                before:mr-2 before:block before:content-[''] before:w-2.5 before:h-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft">
+                class="text-sm sm:text-base text-balance flex items-center before:mr-2 before:block before:content-[''] before:w-2.5 before:h-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft">
                 Тест “Массажист Стоп Начальника” Тест “Массажист Стоп Начальника” Тест “Массажист
                 Стоп Начальника” Тест “Массажист Стоп Начальника”
             </p>
