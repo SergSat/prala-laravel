@@ -9,7 +9,7 @@
             &times;
         </button>
     </section>
-    <section class="bg-white min-h-screen pt-9 px-5 sm:px-10">
+    <section class="bg-white min-h-screen pt-9 px-5 sm:px-10 lg:hidden">
         <h3 class="text-center text-2xl text-stone-500 font-extralight">Меню</h3>
         <nav>
             <ul class="mt-10 flex flex-col gap-5 text-2xl">
