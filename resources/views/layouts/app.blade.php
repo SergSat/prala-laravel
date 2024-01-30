@@ -32,7 +32,7 @@
         @include('parts.sidebar')
     </div>
     <!-- Scripts -->
-    @vite('resources/js/main.js')
+    @vite('resources/js/app.js')
 </body>
 
 </html>
