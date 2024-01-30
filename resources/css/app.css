@@ -13,3 +13,9 @@
 .--pr-active {
     @apply underline underline-offset-2 text-pr-blue
 }
+
+@layer utilities {
+    .--pr-toggle-btn {
+        @apply [&>span::before]:translate-y-0 [&>span::before]:rotate-45 [&>span::after]:translate-y-0 [&>span::after]:-rotate-45 [&>span]:bg-transparent [&>span]:rotate-[360deg]
+    }
+}

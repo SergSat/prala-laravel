@@ -31,6 +31,8 @@
         <!-- Sidebar -->
         @include('parts.sidebar')
     </div>
+    <!-- Scripts -->
+    @vite('resources/js/main.js')
 </body>
 
 </html>

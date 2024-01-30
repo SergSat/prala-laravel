@@ -5,7 +5,7 @@
     <h1 class="sr-only">Мої завдання, навчання та новини</h1>
 
     <div class="mx-auto mt-10 w-full lg:hidden">
-        <div class="flex items-center justify-around sm:justify-center gap-x-5 sm:gap-x-12">
+        <div class="flex items-center justify-center gap-x-5 sm:gap-x-12">
             <img src="{{ Vite::asset('resources/images/photo-model.png') }}" alt="avatar">
             <div class="flex flex-col items-center">
                 <h3 class="text-2xl">Анастасія</h3>
