@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .--pr-success {
-    @apply border border-pr-green text-pr-green;
+    @apply border-2 border-pr-green text-pr-green;
 }
 
 .--pr-success p::before {

@@ -44,7 +44,7 @@
 										type="text"
 										name="login"
 										id="login"
-										class="text-md w-full border border-b border-transparent border-b-white bg-transparent text-white placeholder-white placeholder:text-lg placeholder:font-extralight focus:border-indigo-600 focus:ring-sky-200"
+										class="ext-lg w-full border border-b border-solid border-transparent border-b-white bg-transparent text-pr-blue placeholder-white placeholder:text-lg placeholder:font-extralight focus:border-b-2 focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
 										placeholder="Логін" />
 								</div>
 								<label for="login" class="sr-only">Password</label>
@@ -53,13 +53,13 @@
 										type="password"
 										name="password"
 										id="password"
-										class="text-md w-full border border-b border-transparent border-b-white bg-transparent text-white placeholder-white placeholder:text-lg placeholder:font-extralight focus:border-indigo-600 focus:ring-sky-200"
+										class="w-full border border-b border-solid border-transparent border-b-white bg-transparent text-3xl text-pr-blue placeholder-white placeholder:text-lg placeholder:font-extralight focus:border-b-2 focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
 										placeholder="Пароль" />
 								</div>
 							</div>
 
 							<div
-								class="grid h-28 w-28 shrink-0 translate-x-7 place-items-center rounded-full bg-white sm:translate-x-0 md:h-36 md:w-36 lg:h-52 lg:w-52">
+								class="grid h-28 w-28 shrink-0 place-items-center rounded-full bg-white md:h-36 md:w-36 lg:h-52 lg:w-52">
 								<div class="group grid h-full w-full place-content-center">
 									<a
 										href="#"

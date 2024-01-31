@@ -27,15 +27,15 @@
 					src="{{ Vite::asset('resources/images/prala_logo1.svg') }}"
 					alt="logo-prala"
 					class="w-26 mx-auto mt-16 h-11 sm:h-20 sm:w-40 md:h-28 md:w-80" />
-				<hr class="mt-14 h-px border-0 bg-white" />
+				<hr class="mt-14 h-px border-0 bg-white/50" />
 				<form action="">
 					<div class="mt-2 text-center text-white">
 						<h1 class="text-3xl font-extralight tracking-widest">Вхід</h1>
 					</div>
 
 					<div
-						class="mt-10 w-full rounded-2xl border border-white bg-white/15 px-6 pb-20 pt-9 backdrop-blur min-[300px]:px-10 min-[480px]:px-12 sm:px-16 sm:pb-40">
-						<div class="flex flex-col items-center justify-between gap-16 sm:flex-row">
+						class="mt-10 w-full rounded-2xl border border-white/50 bg-white/15 px-6 pb-20 pt-9 backdrop-blur min-[300px]:px-10 min-[480px]:px-12 sm:px-16 sm:pb-20">
+						<div class="flex flex-col items-center justify-between gap-16">
 							<div
 								class="flex w-full flex-col items-start justify-between gap-5 md:justify-around lg:gap-10">
 								<label for="login" class="sr-only">Login</label>
@@ -44,7 +44,7 @@
 										type="text"
 										name="login"
 										id="login"
-										class="text-md w-full border border-b border-transparent border-b-white bg-transparent text-white placeholder-white placeholder:text-lg placeholder:font-extralight focus:border-indigo-600 focus:ring-sky-200"
+										class="ext-lg w-full border border-b border-solid border-transparent border-b-white bg-transparent text-pr-blue placeholder-white placeholder:text-lg placeholder:font-extralight focus:border-b-2 focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
 										placeholder="Логін" />
 								</div>
 								<label for="login" class="sr-only">Password</label>
@@ -53,60 +53,18 @@
 										type="password"
 										name="password"
 										id="password"
-										class="text-md w-full border border-b border-transparent border-b-white bg-transparent text-white placeholder-white placeholder:text-lg placeholder:font-extralight focus:border-indigo-600 focus:ring-sky-200"
+										class="w-full border border-b border-solid border-transparent border-b-white bg-transparent text-3xl text-pr-blue placeholder-white placeholder:text-lg placeholder:font-extralight focus:border-b-2 focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
 										placeholder="Пароль" />
 								</div>
 							</div>
 
 							<div
-								class="grid h-28 w-28 shrink-0 translate-x-7 place-items-center rounded-full bg-white sm:translate-x-0 md:h-36 md:w-36 lg:h-52 lg:w-52">
-								<div class="group grid h-full w-full place-content-center">
-									<a
-										href="#"
-										class="justify-self-center text-xl font-extralight tracking-wider text-pr-blue transition-colors duration-300 group-hover:text-pr-blueviolet lg:text-3xl">
-										Увійти
-									</a>
-									<a
-										href="#"
-										class="mt-2 hidden justify-self-center transition delay-150 duration-200 ease-in-out group-hover:translate-x-3 md:block">
-										<svg
-											width="56"
-											height="12"
-											viewBox="0 0 56 12"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												class="transition-colors duration-300 group-hover:group-hover:stroke-pr-blueviolet"
-												d="M0.368164 6.52734L54.6318 6.52734"
-												stroke="#0038FF"
-												stroke-width="0.669922" />
-											<path
-												class="transition-colors duration-300 group-hover:group-hover:stroke-pr-blueviolet"
-												d="M47.0957 11.3008L54.6323 6.52759L47.0957 1.00073"
-												stroke="#0038FF"
-												stroke-width="0.669922" />
-										</svg>
-									</a>
-									<a
-										href="#"
-										class="mt-1 justify-self-center transition delay-150 duration-200 ease-in-out group-hover:translate-x-3 md:hidden">
-										<svg
-											width="28"
-											height="6"
-											viewBox="0 0 28 6"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M0.433594 3.26367L27.5654 3.26367"
-												stroke="#0038FF"
-												stroke-width="0.334961" />
-											<path
-												d="M23.7969 5.65039L27.5652 3.26379L23.7969 0.500366"
-												stroke="#0038FF"
-												stroke-width="0.334961" />
-										</svg>
-									</a>
-								</div>
+								class="group grid w-28 shrink-0 place-items-center rounded-lg border border-white bg-transparent hover:border-pr-blue/40 hover:bg-pr-blue/5 md:w-36">
+								<a
+									href="http://dev.prala-laravel.com/index"
+									class="w-full justify-self-center p-2 text-center text-xl font-extralight tracking-wider text-white transition-colors duration-300 focus:border-b-2 focus:border-pr-blue/40 focus:outline-none focus:ring-0 group-hover:text-pr-blue/60 md:p-4 lg:text-3xl">
+									Увійти
+								</a>
 							</div>
 						</div>
 					</div>

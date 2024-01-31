@@ -33,4 +33,11 @@ Route::get('/login-alt', function () {
     return view('pages.login-alt');
 });
 
+Route::get('/tests', function () {
+    return view('pages.tests');
+});
+
+Route::get('/test', function () {
+    return view('pages.test');
+});
 

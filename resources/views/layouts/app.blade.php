@@ -18,7 +18,7 @@
 
 	<body class="scroll-smooth font-light lg:overflow-auto">
 		<div class="relative flex h-min">
-			<div class="w-full bg-pr-beige lg:w-3/4 lg:bg-pr-blue-sky">
+			<div class="min-h-screen w-full bg-pr-beige lg:w-3/4 lg:bg-pr-blue-sky">
 				<!-- Header -->
 				@include('parts.header')
 
