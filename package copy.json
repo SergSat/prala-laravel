@@ -2,9 +2,9 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "vite",
+        "dev": "vite & npm run format-watch",
         "build": "vite build",
-        "format": " 'resources/**/*.blade.php' --ignore node_modules --debounce 500 -c 'npx prettier --write {path}'"
+        "format-watch": "chokidar 'resources/**/*.blade.php' --ignore node_modules --debounce 500 -c 'npx prettier --write {path}'"
     },
     "devDependencies": {
         "@tailwindcss/aspect-ratio": "^0.4.2",
