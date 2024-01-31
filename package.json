@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "format": " 'resources/**/*.blade.php' --ignore node_modules --debounce 500 -c 'npx prettier --write {path}'"
+        "format": "prettier --write 'resources/views/**/*.blade.php'"
     },
     "devDependencies": {
         "@tailwindcss/aspect-ratio": "^0.4.2",

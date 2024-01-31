@@ -16,10 +16,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/index', function () {
     return view('index');
 });
+
+Route::get('/index-training', function () {
+    return view('pages.index-training');
+});
+
 Route::get('/login', function () {
     return view('pages.login');
 });
+
+Route::get('/login-alt', function () {
+    return view('pages.login-alt');
+});
+
 
