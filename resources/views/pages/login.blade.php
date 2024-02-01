@@ -15,9 +15,9 @@
 	@vite('resources/css/app.css')
 </head>
 
-<body class="font-light">
-	<div class="h-full w-full bg-cover bg-center bg-no-repeat pb-10"
-		style="background-image: url({{ Vite::asset('resources/images/enter.png') }})">
+<body class="font-light min-h-screen flex items-center justify-center bg-no-repeat bg-cover bg-center bg-fixed"
+	style="background-image: url({{ Vite::asset('resources/images/enter_min.png') }})">
+	<div class="h-full">
 		<div class="mx-auto flex w-4/5 flex-col sm:max-w-[648px]">
 			<img width="350" height="153" src="{{ Vite::asset('resources/images/prala_logo1.svg') }}" alt="logo-prala"
 				class="w-26 mx-auto mt-16 h-11 sm:h-20 sm:w-40 md:h-28 md:w-80" />
@@ -28,13 +28,13 @@
 				</div>
 
 				<div
-					class="mt-10 w-full rounded-2xl border border-white bg-white/15 px-6 pb-20 pt-9 backdrop-blur max-[380px]:px-10 max-[380px]:pb-10 max-[380px]:pt-8 min-[480px]:px-12 sm:px-16 sm:pb-40">
+					class="mt-10 mb-5 sm:mb-10 w-full rounded-2xl border border-white bg-white/15 px-6 pb-20 pt-9 backdrop-blur max-[380px]:px-10 max-[380px]:pb-10 max-[380px]:pt-8 min-[480px]:px-12 sm:px-16 sm:pb-40">
 					<div class="flex flex-col items-center justify-between gap-16 sm:flex-row">
 						<div class="flex w-full flex-col items-start justify-between gap-5 md:justify-around lg:gap-10">
 							<label for="login" class="sr-only">Login</label>
 							<div class="w-full md:mt-2">
 								<input type="text" name="login" id="login"
-									class="ext-lg w-full border border-b border-solid border-transparent border-b-white bg-transparent text-pr-blue placeholder-white placeholder:text-lg placeholder:font-extralight focus:border-b-2 focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
+									class="text-lg w-full border border-b border-solid border-transparent border-b-white bg-transparent text-pr-blue placeholder-white placeholder:text-lg placeholder:font-extralight focus:border-b-2 focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
 									placeholder="Логін" />
 							</div>
 							<label for="login" class="sr-only">Password</label>
