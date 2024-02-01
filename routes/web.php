@@ -31,13 +31,13 @@ Route::get('/login', function () {
 
 Route::get('/login-alt', function () {
     return view('pages.login-alt');
-});
+})->name('');
 
 Route::get('/tests', function () {
     return view('pages.tests');
-});
+})->name('');
 
 Route::get('/test', function () {
     return view('pages.test');
-});
+})->name('');
 
