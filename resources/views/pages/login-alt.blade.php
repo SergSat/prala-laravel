@@ -17,7 +17,7 @@
 
 <body class="font-light min-h-screen flex items-center justify-center bg-no-repeat bg-cover bg-center bg-fixed"
 	style="background-image: url({{ Vite::asset('resources/images/enter_min.png') }})">
-	<div class="h-full">
+	<div class="h-full w-full">
 		<div class="mx-auto flex h-dvh w-4/5 flex-col sm:max-w-[648px]">
 			<img width="350" height="153" src="{{ Vite::asset('resources/images/prala_logo1.svg') }}" alt="logo-prala"
 				class="w-26 mx-auto mt-16 h-11 sm:h-20 sm:w-40 md:h-28 md:w-80" />

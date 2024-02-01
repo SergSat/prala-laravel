@@ -17,7 +17,7 @@
 
 <body class="font-light min-h-screen flex items-center justify-center bg-no-repeat bg-cover bg-center bg-fixed"
 	style="background-image: url({{ Vite::asset('resources/images/enter_min.png') }})">
-	<div class="h-full">
+	<div class="h-full w-full">
 		<div class="mx-auto flex w-4/5 flex-col sm:max-w-[648px]">
 			<img width="350" height="153" src="{{ Vite::asset('resources/images/prala_logo1.svg') }}" alt="logo-prala"
 				class="w-26 mx-auto mt-16 h-11 sm:h-20 sm:w-40 md:h-28 md:w-80" />
@@ -48,11 +48,11 @@
 						<div
 							class="grid h-28 w-28 shrink-0 place-items-center rounded-full bg-white md:h-36 md:w-36 lg:h-52 lg:w-52">
 							<div class="group grid h-full w-full place-content-center">
-								<a href="#"
+								<a href="{{route('index')}}"
 									class="justify-self-center text-xl font-extralight tracking-wider text-pr-blue transition-colors duration-300 group-hover:text-pr-blueviolet lg:text-3xl">
 									Увійти
 								</a>
-								<a href="#"
+								<a href="{{route('index')}}"
 									class="mt-2 hidden justify-self-center transition delay-150 duration-200 ease-in-out group-hover:translate-x-3 md:block">
 									<svg width="56" height="12" viewBox="0 0 56 12" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +66,7 @@
 											stroke-width="0.669922" />
 									</svg>
 								</a>
-								<a href="#"
+								<a href="{{route('index')}}"
 									class="mt-1 justify-self-center transition delay-150 duration-200 ease-in-out group-hover:translate-x-3 md:hidden">
 									<svg width="28" height="6" viewBox="0 0 28 6" fill="none"
 										xmlns="http://www.w3.org/2000/svg">

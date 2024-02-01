@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 Route::get('/index-training', function () {
     return view('pages.index-training');
-});
+})->name('');
 
 Route::get('/login', function () {
     return view('pages.login');
