@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 Route::get('/index-training', function () {
     return view('pages.index-training');
-});
+})->name('');
 
 Route::get('/login', function () {
     return view('pages.login');
@@ -31,13 +31,13 @@ Route::get('/login', function () {
 
 Route::get('/login-alt', function () {
     return view('pages.login-alt');
-});
+})->name('');
 
 Route::get('/tests', function () {
     return view('pages.tests');
-});
+})->name('');
 
 Route::get('/test', function () {
     return view('pages.test');
-});
+})->name('');
 
