@@ -196,27 +196,27 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     });
 
     // Our routes
-//    Route::get('/', function () {
-//        return view('index');
-//    })->name('index');
-//
-//    Route::get('/index-training', function () {
-//        return view('pages.index-training');
-//    })->name('');
-//
-//    Route::get('/login', function () {
-//        return view('pages.login');
-//    })->name('');
-//
-//    Route::get('/login-alt', function () {
-//        return view('pages.login-alt');
-//    })->name('');
-//
-//    Route::get('/tests', function () {
-//        return view('pages.tests');
-//    })->name('');
-//
-//    Route::get('/test', function () {
-//        return view('pages.test');
-//    })->name('');
+   Route::get('/home', function () {
+       return view('home');
+   })->name('');
+
+   Route::get('/index-training', function () {
+       return view('pages.index-training');
+   })->name('');
+
+   Route::get('/login', function () {
+       return view('pages.login');
+   })->name('');
+
+   Route::get('/login-alt', function () {
+       return view('pages.login-alt');
+   })->name('');
+
+   Route::get('/tests', function () {
+       return view('pages.tests');
+   })->name('');
+
+   Route::get('/test', function () {
+       return view('pages.test');
+   })->name('');
 });
