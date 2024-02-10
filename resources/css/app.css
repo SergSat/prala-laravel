@@ -1,6 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Additional styles */
+@import 'additional-styles/utility-patterns.css';
+@import 'additional-styles/flatpickr.css';
+
+@import 'tailwindcss/utilities';
 
 .--pr-success {
     @apply border-2 border-pr-green text-pr-green;
@@ -14,8 +19,6 @@
     @apply text-pr-blue underline underline-offset-2;
 }
 
-@layer utilities {
-    .--pr-toggle-btn {
-        @apply [&>span::after]:translate-y-0 [&>span::after]:-rotate-45 [&>span::before]:translate-y-0 [&>span::before]:rotate-45 [&>span]:rotate-[360deg] [&>span]:bg-transparent;
-    }
+.--pr-toggle-btn {
+    @apply [&>span::after]:translate-y-0 [&>span::after]:-rotate-45 [&>span::before]:translate-y-0 [&>span::before]:rotate-45 [&>span]:rotate-[360deg] [&>span]:bg-transparent;
 }
