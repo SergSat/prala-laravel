@@ -12,7 +12,7 @@
 		<div class="mx-auto flex w-11/12 flex-col items-center lg:mx-0">
 			{{-- Link to Tests --}}
 			<div class="flex items-center gap-2 self-start">
-				<a href="http://stage.prala.love/tests" class="group inline-flex items-center">
+				<a href="{{ route('tests') }}" class="group inline-flex items-center">
 					<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"
 						class="h-4 w-4 group-hover:opacity-60">
 						<path
