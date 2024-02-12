@@ -16,7 +16,7 @@
 }
 
 .--pr-active {
-    @apply text-pr-blue underline underline-offset-2;
+    @apply text-pr-blue underline underline-offset-2 hover:text-pr-blueviolet hover:fill-pr-blueviolet;
 }
 
 .--pr-toggle-btn {

@@ -5,21 +5,7 @@
 	<h1 class="sr-only">Teст</h1>
 
 	{{-- Block with Avatar --}}
-	<div class="mx-auto mt-10 lg:hidden">
-		<div class="flex items-center justify-center gap-x-5 sm:gap-x-12">
-			<img src="{{ Vite::asset('resources/images/photo-model.png') }}" alt="avatar" />
-			<div class="flex flex-col items-center">
-				<h3 class="text-2xl">Анастасія</h3>
-				<p class="mt-1 font-extralight text-stone-500">Кулінарний геній</p>
-				<div class="mt-3 flex w-3/4 items-center justify-between">
-					<img class="h-5 w-5" src="{{ Vite::asset('resources/images/starfull.svg') }}" alt="star" />
-					<img class="h-5 w-5" src="{{ Vite::asset('resources/images/starempty.svg') }}" alt="star" />
-					<img class="h-5 w-5" src="{{ Vite::asset('resources/images/starempty.svg') }}" alt="star" />
-					<img class="h-5 w-5" src="{{ Vite::asset('resources/images/starempty.svg') }}" alt="star" />
-				</div>
-			</div>
-		</div>
-	</div>
+	@include('parts.mobile_head')
 
 	<!-- Test -->
 	<section class="mt-10 w-full">
@@ -38,6 +24,7 @@
 				<div class="h-6 border-l border-black"></div>
 				<h3 class="text-xl text-pr-blue">Тест 1</h3>
 			</div>
+			{{-- Link to Tests --}}
 
 			{{-- TEST --}}
 			<section class="mt-7 w-full rounded-2xl bg-white p-5">
@@ -45,64 +32,18 @@
 				<img width="310" height="125" class="mt-5 w-full rounded-xl bg-pr-gray-soft object-cover"
 					src="{{ Vite::asset('resources/images/article_1.jpg') }}" alt="photo for question" />
 
-				<div>
-					<div
-						class="mt-5 flex items-center justify-between gap-4 rounded-md border-2 border-pr-gray-soft bg-white p-5 drop-shadow-lg max-[320px]:flex-col">
-						<p
-							class="flex items-center text-balance text-sm before:mr-2 before:block before:h-2.5 before:w-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft before:content-[''] sm:text-base">
-							Варіант 1
-						</p>
-						<p class="whitespace-nowrap text-sm sm:text-base">Обрати</p>
-					</div>
+				<ul class="flex flex-col gap-5">
+					@include('parts.test-item')
 
-					<div
-						class="mt-5 flex items-center justify-between gap-4 rounded-md border-2 border-pr-gray-soft bg-white p-5 drop-shadow-lg max-[320px]:flex-col">
-						<p
-							class="flex items-center text-balance text-sm before:mr-2 before:block before:h-2.5 before:w-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft before:content-[''] sm:text-base">
-							Варіант 2
-						</p>
-						<p class="whitespace-nowrap text-sm sm:text-base">Обрати</p>
-					</div>
+					@include('parts.test-item')
 
-					<div
-						class="mt-5 flex items-center justify-between gap-4 rounded-md border-2 border-pr-gray-soft bg-white p-5 drop-shadow-lg max-[320px]:flex-col">
-						<p
-							class="flex items-center text-balance text-sm before:mr-2 before:block before:h-2.5 before:w-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft before:content-[''] sm:text-base">
-							Варіант 3
-						</p>
-						<p class="whitespace-nowrap text-sm sm:text-base">Обрати</p>
-					</div>
+					@include('parts.test-item')
 
-					<div
-						class="--pr-success mt-5 flex items-center justify-between gap-4 rounded-md border-2 border-pr-gray-soft bg-white p-5 drop-shadow-lg max-[320px]:flex-col">
-						<p
-							class="flex items-center text-balance text-sm before:mr-2 before:block before:h-2.5 before:w-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft before:content-[''] sm:text-base">
-							Варіант 4
-						</p>
-						<p class="whitespace-nowrap text-sm sm:text-base">Обрано</p>
-					</div>
-				</div>
+					@include('parts.test-item-success')
+				</ul>
 			</section>
 
-			<div class="mt-5 flex items-center justify-center gap-2 rounded-full bg-white px-7 py-2">
-				<a href="http://stage.prala.love/tests" class="group inline-flex items-center gap-3">
-					<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
-						class="group-hover:opacity-60">
-						<path d="M14.8996 17.3008L10.0996 12.5008L14.8996 7.70078" stroke="black" stroke-linecap="round"
-							stroke-linejoin="round" />
-					</svg>
-					<span class="text-lg group-hover:opacity-60">Назад</span>
-				</a>
-				<div class="h-6 border-l border-black"></div>
-				<a href="#" class="group inline-flex items-center gap-3 text-xl text-pr-blue">
-					<span class="text-lg group-hover:opacity-60">Далі</span>
-					<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
-						class="group-hover:opacity-60">
-						<path d="M10.1004 7.69922L14.9004 12.4992L10.1004 17.2992" stroke="#0038FF"
-							stroke-linecap="round" stroke-linejoin="round" />
-					</svg>
-				</a>
-			</div>
+			@include('parts.links-bottom-block')
 		</div>
 	</section>
 </article>
