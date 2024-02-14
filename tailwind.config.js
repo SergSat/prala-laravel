@@ -57,6 +57,7 @@ export default {
         '6xl': ['3.75rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
       },
       screens: {
+        xxs: '375px',
         xs: '480px',
       },
       borderWidth: {

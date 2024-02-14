@@ -6,7 +6,12 @@
 
     @include('parts.mobile_head')
 
-    {{-- Mobile Tabs for Votes --}}
+    <!-- Posts -->
+    @include('parts.blog-posts')
+    @include('parts.blog-posts')
+    @include('parts.blog-posts')
+    @include('parts.blog-posts')
+    <!-- Posts -->
 
 
 </article>

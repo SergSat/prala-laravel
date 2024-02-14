@@ -26,6 +26,6 @@
     }
 
     .--pr-tab-active {
-        @apply bg-white rounded-lg text-nowrap text-pr-blue
+        @apply bg-white rounded-lg text-nowrap text-pr-blue transition-all
     }
 }
