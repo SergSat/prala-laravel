@@ -49,7 +49,7 @@
 							class="grid h-28 w-28 shrink-0 place-items-center rounded-full bg-white md:h-36 md:w-36 lg:h-52 lg:w-52">
 							<div class="group grid h-full w-full place-content-center">
 								<a href="{{ route('home') }}"
-									class="justify-self-center text-xl font-extralight tracking-wider text-pr-blue transition-colors duration-300 group-hover:text-pr-blueviolet lg:text-3xl">
+									class="justify-self-center text-xl font-extralight tracking-wider text-pr-blue transition-colors duration-200 group-hover:text-pr-blueviolet lg:text-3xl">
 									Увійти
 								</a>
 								<a href="{{ route('home') }}"
@@ -57,11 +57,11 @@
 									<svg width="56" height="12" viewBox="0 0 56 12" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
 										<path
-											class="transition-colors duration-300 group-hover:group-hover:stroke-pr-blueviolet"
+											class="transition-colors duration-200 group-hover:group-hover:stroke-pr-blueviolet"
 											d="M0.368164 6.52734L54.6318 6.52734" stroke="#0038FF"
 											stroke-width="0.669922" />
 										<path
-											class="transition-colors duration-300 group-hover:group-hover:stroke-pr-blueviolet"
+											class="transition-colors duration-200 group-hover:group-hover:stroke-pr-blueviolet"
 											d="M47.0957 11.3008L54.6323 6.52759L47.0957 1.00073" stroke="#0038FF"
 											stroke-width="0.669922" />
 									</svg>

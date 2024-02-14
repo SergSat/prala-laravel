@@ -1,5 +1,6 @@
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
+
 const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss').Config} */
@@ -76,12 +77,16 @@ export default {
       zIndex: {
         60: '60',
       },
+      containers: {
+        '2xs': '16rem',
+      }
     },
   },
 
   plugins: [
     forms,
     typography,
+    require('@tailwindcss/container-queries'),
     // add custom variant for expanding sidebar
     plugin(({ addVariant, e }) => {
       addVariant('sidebar-expanded', ({ modifySelectors, separator }) => {

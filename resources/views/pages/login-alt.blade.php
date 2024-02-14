@@ -48,7 +48,7 @@
 						<div
 							class="group grid w-28 shrink-0 place-items-center rounded-lg border border-white bg-transparent hover:border-pr-blue/40 hover:bg-pr-blue/5 md:w-36">
 							<a href="{{ route('home') }}"
-								class="w-full justify-self-center p-2 text-center text-xl font-extralight tracking-wider text-white transition-colors duration-300 focus:border-b-2 focus:border-pr-blue/40 focus:outline-none focus:ring-0 group-hover:text-pr-blue/60 md:p-4 lg:text-3xl">
+								class="w-full justify-self-center p-2 text-center text-xl font-extralight tracking-wider text-white transition-colors duration-200 focus:border-b-2 focus:border-pr-blue/40 focus:outline-none focus:ring-0 group-hover:text-pr-blue/60 md:p-4 lg:text-3xl">
 								Увійти
 							</a>
 						</div>

@@ -9,7 +9,7 @@
 	<!-- Tests -->
 	<section class="w-full">
 		<div
-			class="mx-auto mt-7 flex flex-col rounded-xl bg-white px-5 pb-10 text-center text-pr-blue drop-shadow-lg sm:px-10 md:w-11/12 lg:mx-0 lg:mx-0 lg:mt-0">
+			class="mx-auto mt-7 flex flex-col rounded-xl bg-white px-5 pb-10 text-center text-pr-blue drop-shadow-lg sm:px-10 md:w-11/12 lg:mx-0 lg:mt-0">
 
 			<!-- Tests List header -->
 			<div class="flex items-center justify-between pt-5">

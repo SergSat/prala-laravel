@@ -29,8 +29,10 @@
 			{{-- TEST --}}
 			<section class="mt-7 w-full rounded-2xl bg-white p-5">
 				<h4 class="text-lg">Питання 1</h4>
-				<img width="310" height="125" class="mt-5 w-full rounded-xl bg-pr-gray-soft object-cover"
-					src="{{ Vite::asset('resources/images/article_1.jpg') }}" alt="photo for question" />
+				<picture>
+					<img width="310" height="125" class="mt-5 w-full rounded-xl bg-pr-gray-soft object-cover"
+						src="{{ Vite::asset('resources/images/article_1.jpg') }}" alt="photo for question" />
+				</picture>
 
 				<ul class="flex flex-col gap-5">
 					@include('parts.test-item')

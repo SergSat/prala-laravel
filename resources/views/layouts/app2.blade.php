@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<title>Prala</title>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Fonts -->
-		<link rel="preconnect" href="https://fonts.bunny.net" />
-		<link
-			href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap"
-			rel="stylesheet" />
+	<title>Prala</title>
 
-		<!-- Stylesheet -->
-		@vite('resources/css/app.css')
-	</head>
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.bunny.net" />
+	<link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
-	<body class="scroll-smooth font-light lg:overflow-auto">
-		<div class="relative flex h-min">
-			<div class="min-h-screen w-full bg-pr-beige lg:w-3/4 lg:bg-pr-blue-sky">
-				<!-- Header -->
-				@include('parts.header')
+	<!-- Stylesheet -->
+	@vite('resources/css/app.css')
+</head>
 
-				<!-- Main -->
-				<main class="px-5 pb-5">
-					@yield('content')
-				</main>
-			</div>
+<body class="scroll-smooth font-light lg:overflow-auto">
+	<div class="relative flex h-min">
+		<div class="min-h-screen w-full bg-pr-beige lg:w-3/4 lg:bg-pr-blue-sky">
+			<!-- Header -->
+			@include('parts.header')
 
-			<!-- Sidebar -->
-			@include('parts.sidebar')
+			<!-- Main -->
+			<main class="px-5 pb-5 sm:px-8 md:px-10 lg:px-5">
+				@yield('content')
+			</main>
 		</div>
-		<!-- Scripts -->
-		@vite('resources/js/app.js')
-	</body>
+
+		<!-- Sidebar -->
+		@include('parts.sidebar')
+	</div>
+	<!-- Scripts -->
+	@vite('resources/js/app.js')
+</body>
+
 </html>
