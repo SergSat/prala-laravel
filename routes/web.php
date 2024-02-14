@@ -79,4 +79,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/vote-past-page', function () {
         return view('pages.vote-past-page');
     })->name('vote-past');
+
+    Route::get('/blog', function () {
+        return view('pages.blog-page');
+    })->name('blog');
 });

@@ -1,4 +1,6 @@
-const ToggleHamburgerMenu = () => {
+
+// ------ Hamburger Menu -----
+(function ToggleHamburgerMenu() {
   const hamburgerBtnOpen = document.getElementById('hamburger-button');
   const mobileMenu = document.getElementById('mobile-menu');
 
@@ -11,12 +13,10 @@ const ToggleHamburgerMenu = () => {
   };
 
   hamburgerBtnOpen.addEventListener('click', toggleMenu);
-};
-
-document.addEventListener('DOMContentLoaded', ToggleHamburgerMenu);
+})();
 
 
-//------ Autocomplete Search-----
+//------ Autocomplete Search -----
 (function () {
   const searchForm = document.querySelector("#search-form");
   const searchInput = document.querySelector("#simple-search");
@@ -90,3 +90,43 @@ document.addEventListener('DOMContentLoaded', ToggleHamburgerMenu);
     }, 200);
   });
 })();
+
+
+// ------ Tabs for Votes -----
+(function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    if (!tabLinks || !tabContents) {
+      return;
+    }
+
+    const tabLinksArray = Array.from(tabLinks);
+    const tabContentsArray = Array.from(tabContents);
+
+    document.addEventListener('click', function (event) {
+      const clickedTabLink = event.target.closest('.tab-link');
+      if (!clickedTabLink) {
+        return;
+      }
+
+      event.preventDefault();
+
+      tabLinksArray.forEach(function (link) {
+        link.classList.remove('--pr-tab-active');
+      });
+      tabContentsArray.forEach(function (tabContent) {
+        tabContent.classList.add('hidden');
+      });
+
+      clickedTabLink.classList.add('--pr-tab-active');
+
+      const targetTabId = clickedTabLink.getAttribute('href').substring(1);
+      const targetTabContent = document.getElementById(targetTabId);
+
+      targetTabContent.classList.remove('hidden');
+    });
+  });
+})();
+
