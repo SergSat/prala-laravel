@@ -83,4 +83,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/blog', function () {
         return view('pages.blog-page');
     })->name('blog');
+
+    Route::get('/responsibilities', function () {
+        return view('pages.responsibilities-page');
+    })->name('responsibilities');
 });

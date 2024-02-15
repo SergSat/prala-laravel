@@ -29,7 +29,6 @@
   searchInput.addEventListener("focus", () => {
     searchForm.classList.remove("w-auto");
     searchForm.classList.add(
-      "z-50",
       "sm:z-0",
       "sm:static",
       "sm:bg-transparent",
@@ -49,9 +48,8 @@
       filteredItems.forEach((item) => {
         const listItem = document.createElement("li");
         listItem.classList.add(
-          "z-50",
-          "p-2",
-          "b-white",
+          "py-2",
+          "px-3",
           "border-b",
           "border-b-pr-blue",
           "cursor-pointer",
@@ -72,15 +70,13 @@
     }
   });
 
-  // Скрыть список при потере фокуса
   searchInput.addEventListener("blur", () => {
     setTimeout(() => {
-      // Timeout для обработки клика по элементу списка
+
       autocompleteList.classList.add("hidden");
       searchForm.classList.remove(
-        "z-50",
-        "p-2",
-        "b-white",
+        "py-2",
+        "px-3",
         "border-b",
         "border-b-pr-blue",
         "cursor-pointer",

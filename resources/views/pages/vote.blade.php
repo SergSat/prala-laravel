@@ -8,7 +8,7 @@
 
     {{-- Mobile Tabs for Votes --}}
     <div class="flex flex-col items-center justify-center w-full mt-7 xl:hidden">
-        <h2 class="text-2xl text-center drop-shadow-md text-pr-blue xl:hidden">Голосування</h2>
+        <h2 class="text-2xl font-medium text-center drop-shadow-md text-pr-blue xl:hidden">Голосування</h2>
 
         <div role="tablist"
             class="relative w-max mx-auto h-11 mt-7 grid grid-cols-3 items-center px-[3px] rounded-lg bg-pr-beige overflow-hidden drop-shadow-2xl shadow-900/20 transition">

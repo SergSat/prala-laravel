@@ -23,15 +23,15 @@
                 </div>
                 <ul id="autocompleteList" role="list"
                     class="absolute left-0 z-30 hidden w-full mt-2 overflow-auto bg-white border border-gray-100 top-10 last:rounded-b-lg max-h-60">
-
-                    <li class="px-3 py-2">HBHJBHJBhj</li>
+                    {{--
+                    <li class="px-3 py-2">HBHJBHJBhj</li> --}}
                 </ul>
             </div>
         </form>
         {{-- Search block --}}
 
         <div
-            class="relative z-10 flex flex-col px-5 pb-10 mx-auto text-center bg-white mt-7 rounded-xl text-pr-blue drop-shadow-lg sm:px-10 md:w-11/12 lg:mx-0 xl:w-3/4">
+            class="relative flex flex-col px-5 pb-10 mx-auto text-center bg-white -z-10 mt-7 rounded-xl text-pr-blue drop-shadow-lg sm:px-10 md:w-11/12 lg:mx-0 xl:w-3/4">
 
             <!-- Tests List header -->
             <div class="flex items-center justify-between pt-5">
