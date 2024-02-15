@@ -87,4 +87,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/responsibilities', function () {
         return view('pages.responsibilities-page');
     })->name('responsibilities');
+
+    Route::get('/responsibilities-categories', function () {
+        return view('pages.responsibilities-categories-page');
+    })->name('responsibilities-categories');
 });
