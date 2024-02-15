@@ -9,7 +9,7 @@
 	<!-- Tests -->
 	<section class="w-full">
 		<div
-			class="mx-auto mt-7 flex flex-col rounded-xl bg-white px-5 pb-10 text-center text-pr-blue drop-shadow-lg sm:px-10 md:w-11/12 lg:mx-0 lg:mt-0">
+			class="flex flex-col px-5 pb-10 mx-auto text-center bg-white mt-7 rounded-xl text-pr-blue drop-shadow-lg sm:px-10 md:w-11/12 lg:mx-0 lg:mt-0">
 
 			<!-- Tests List header -->
 			<div class="flex items-center justify-between pt-5">
@@ -20,7 +20,7 @@
 			</div>
 			<!-- Tests List header -->
 
-			<ul class="mt-7 grid auto-rows-auto grid-cols-2 gap-5 md:grid-cols-3 md:gap-8 lg:gap-10">
+			<ul class="grid grid-cols-2 gap-5 mt-7 auto-rows-auto md:grid-cols-3 md:gap-8 lg:gap-10">
 
 				@include('parts.tests-list-item')
 

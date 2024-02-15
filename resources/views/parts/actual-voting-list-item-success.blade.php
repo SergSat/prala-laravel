@@ -4,5 +4,5 @@
         class="flex items-center text-balance text-sm before:mr-2 before:block before:h-2.5 before:w-2.5 before:shrink-0 before:rounded-full before:bg-pr-gray-soft before:content-[''] sm:text-base">
         Варіант 1
     </p>
-    <button type="submit" class="whitespace-nowrap text-sm sm:text-base">Обрано</button>
+    <button type="submit" class="text-sm whitespace-nowrap sm:text-base">Обрано</button>
 </li>

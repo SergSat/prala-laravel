@@ -94,38 +94,53 @@
 
 // ------ Tabs for Votes -----
 (function () {
-  document.addEventListener("DOMContentLoaded", function () {
-    const tabLinks = document.querySelectorAll('.tab-link');
-    const tabContents = document.querySelectorAll('.tab-content');
+  let tabs = document.querySelectorAll('.tab');
+  let indicator = document.querySelector('.--pr-indicator');
+  let panels = document.querySelectorAll('.tab-panel');
+  let parentRect = tabs[0].parentElement.getBoundingClientRect();
 
-    if (!tabLinks || !tabContents) {
-      return;
-    }
+  if (!tabs.length || !indicator || !panels.length) {
+    console.error('Необхідні елементи не знайдено на сторінці');
+    return;
+  }
 
-    const tabLinksArray = Array.from(tabLinks);
-    const tabContentsArray = Array.from(tabContents);
+  let initialTabWidth = tabs[0].getBoundingClientRect().width;
+  let initialTabLeft = tabs[0].getBoundingClientRect().left - parentRect.left;
 
-    document.addEventListener('click', function (event) {
-      const clickedTabLink = event.target.closest('.tab-link');
-      if (!clickedTabLink) {
-        return;
+  indicator.style.width = initialTabWidth + 'px';
+  indicator.style.left = initialTabLeft + 'px';
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(otherTab => {
+        if (otherTab !== tab && otherTab.classList.contains('text-pr-blue')) {
+          otherTab.classList.remove('text-pr-blue');
+          otherTab.classList.add('text-gray-800');
+        }
+      });
+
+      if (!tab.classList.contains('text-pr-blue')) {
+        tab.classList.remove('text-gray-800');
+        tab.classList.add('text-pr-blue');
+      } else {
+        tab.classList.add('text-gray-800');
+        tab.classList.remove('text-pr-blue');
       }
 
-      event.preventDefault();
+      let tabRect = tab.getBoundingClientRect();
+      let tabTarget = tab.getAttribute('aria-controls');
 
-      tabLinksArray.forEach(function (link) {
-        link.classList.remove('--pr-tab-active');
+      indicator.style.width = tabRect.width + 'px';
+      indicator.style.left = tabRect.left - parentRect.left + 'px';
+
+      panels.forEach(panel => {
+        let panelId = panel.getAttribute('id');
+        if (panelId === tabTarget) {
+          panel.classList.remove('hidden');
+        } else {
+          panel.classList.add('hidden');
+        }
       });
-      tabContentsArray.forEach(function (tabContent) {
-        tabContent.classList.add('hidden');
-      });
-
-      clickedTabLink.classList.add('--pr-tab-active');
-
-      const targetTabId = clickedTabLink.getAttribute('href').substring(1);
-      const targetTabContent = document.getElementById(targetTabId);
-
-      targetTabContent.classList.remove('hidden');
     });
   });
 })();

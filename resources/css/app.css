@@ -25,7 +25,7 @@
         @apply [&>span::after]:translate-y-0 [&>span::after]:-rotate-45 [&>span::before]:translate-y-0 [&>span::before]:rotate-45 [&>span]:rotate-[360deg] [&>span]:bg-transparent;
     }
 
-    .--pr-tab-active {
-        @apply bg-white rounded-lg text-nowrap text-pr-blue transition-all
+    .--pr-indicator {
+        transition: left .3s
     }
 }
