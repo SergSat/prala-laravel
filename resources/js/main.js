@@ -49,6 +49,7 @@
       filteredItems.forEach((item) => {
         const listItem = document.createElement("li");
         listItem.classList.add(
+          "z-50",
           "p-2",
           "b-white",
           "border-b",
@@ -77,6 +78,7 @@
       // Timeout для обработки клика по элементу списка
       autocompleteList.classList.add("hidden");
       searchForm.classList.remove(
+        "z-50",
         "p-2",
         "b-white",
         "border-b",

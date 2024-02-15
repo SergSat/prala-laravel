@@ -6,10 +6,10 @@
     @include('parts.mobile_head')
 
     <!-- Tests -->
-    <section class="flex flex-col w-full">
+    <section class="z-10 flex flex-col w-full">
 
         {{-- Search block --}}
-        <form id="search-form" class="self-end">
+        <form id="search-form" class="z-20 self-end">
             <div class="relative inline-flex flex-col justify-center text-gray-500">
                 <div class="relative">
                     <input id="simple-search" type="text" autocomplete="off"
@@ -22,14 +22,16 @@
                     </svg>
                 </div>
                 <ul id="autocompleteList" role="list"
-                    class="hidden w-full mt-2 bg-white border border-gray-100 last:rounded-b-lg">
+                    class="absolute left-0 z-30 hidden w-full mt-2 overflow-auto bg-white border border-gray-100 top-10 last:rounded-b-lg max-h-60">
+
+                    <li class="px-3 py-2">HBHJBHJBhj</li>
                 </ul>
             </div>
         </form>
         {{-- Search block --}}
 
         <div
-            class="flex flex-col px-5 pb-10 mx-auto text-center bg-white mt-7 rounded-xl text-pr-blue drop-shadow-lg sm:px-10 md:w-11/12 lg:mx-0 xl:w-3/4">
+            class="relative z-10 flex flex-col px-5 pb-10 mx-auto text-center bg-white mt-7 rounded-xl text-pr-blue drop-shadow-lg sm:px-10 md:w-11/12 lg:mx-0 xl:w-3/4">
 
             <!-- Tests List header -->
             <div class="flex items-center justify-between pt-5">
