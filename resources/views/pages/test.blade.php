@@ -27,7 +27,7 @@
 			{{-- Link to Tests --}}
 
 			{{-- TEST --}}
-			<section class="w-full p-5 bg-white mt-7 rounded-2xl">
+			<section class="w-full max-w-xl p-5 bg-white mt-7 rounded-2xl">
 				<h4 class="text-lg">Питання 1</h4>
 				<picture>
 					<img width="310" height="125" class="object-cover w-full mt-5 rounded-xl bg-pr-gray-soft"

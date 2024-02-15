@@ -3,11 +3,10 @@
 @section('content')
 <article class="grid w-full grid-flow-row grid-cols-1 gap-5 lg:grid-cols-1 lg:pt-24">
 
+    {{-- Block with Avatar --}}
     @include('parts.mobile_head')
 
-    <!-- Tests -->
     <section class="z-10 flex flex-col w-full">
-
         {{-- Search block --}}
         <form id="search-form" class="z-20 self-end">
             <div class="relative inline-flex flex-col justify-center text-gray-500">
@@ -33,15 +32,16 @@
         <div
             class="relative flex flex-col px-5 pb-10 mx-auto text-center bg-white -z-10 mt-7 rounded-xl text-pr-blue drop-shadow-lg sm:px-10 md:w-11/12 lg:mx-0 xl:w-3/4">
 
-            <!-- Tests List header -->
+            <!-- Library header -->
             <div class="flex items-center justify-between pt-5">
                 <h1 class="text-xl lg:text-2xl">Бібліотека</h1>
                 <a href="{{ route('home') }}" class="transition-colors duration-200 hover:text-pr-blueviolet">
                     Назад
                 </a>
             </div>
-            <!-- Tests List header -->
+            <!-- Library header -->
 
+            {{-- Library List --}}
             <ul class="grid grid-cols-2 gap-5 mt-7 auto-rows-auto md:grid-cols-3 xl:grid-cols-4 md:gap-8 lg:gap-10">
 
                 @include('parts.library-list-item')
@@ -70,6 +70,5 @@
             </ul>
         </div>
     </section>
-    <!-- Training -->
 </article>
 @endsection

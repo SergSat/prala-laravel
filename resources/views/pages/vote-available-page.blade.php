@@ -9,7 +9,7 @@
     <section class="flex flex-col items-center w-full mx-auto">
         <h1 class="sr-only">Доступне голосування</h1>
 
-        {{-- Link to Tests --}}
+        {{-- Link to Votes Page --}}
         <div class="flex items-center self-start gap-2">
             <a href="{{ route('vote') }}" class="inline-flex items-center group">
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +23,9 @@
             <div class="h-6 border-l border-black"></div>
             <h3 class="text-xl text-pr-blue">Назва голосування</h3>
         </div>
-        {{-- Link to Tests --}}
+        {{-- Link to Votes Page --}}
 
+        {{-- Avaliable Votes List --}}
         <div
             class="flex flex-col max-w-screen-md gap-5 p-5 bg-white mt-7 lg:p-8 lg:pt-0 lg:mt-5 rounded-xl drop-shadow-lg">
             <picture>
@@ -41,6 +42,7 @@
                 @include('parts.actual-voting-list-item-success')
             </ul>
         </div>
+        {{-- Avaliable Votes List --}}
 
         @include('parts.links-bottom-block')
     </section>

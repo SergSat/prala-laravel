@@ -1,9 +1,9 @@
-<div class="relative flex flex-col gap-3 rounded-lg text-center">
-    <a href="{{ route('responsibilities-categories') }}">
+<div class="relative flex flex-col gap-3 text-center rounded-lg">
+    <a href="{{ route('responsibilities-article') }}">
         <img src="{{ Vite::asset('resources/images/presentations.png') }}" alt=""
-            class="bg-pr-gray-soft w-full rounded-lg">
+            class="w-full rounded-lg bg-pr-gray-soft">
     </a>
-    <a href="{{ route('responsibilities-categories') }}" class="w-full">
+    <a href="{{ route('responsibilities-article') }}" class="w-full">
         <span>
             Категорія
         </span>
