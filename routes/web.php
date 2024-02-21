@@ -35,7 +35,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return view('pages/utility/404');
     })->name('404');
 
-    Route::fallback(function () {
+    Route::fallback(function() {
         return view('pages/utility/404');
     });
 
@@ -63,4 +63,36 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/test', function () {
         return view('pages.test');
     })->name('test');
+
+    Route::get('/library-page', function () {
+        return view('pages.library-page');
+    })->name('library-page');
+
+    Route::get('/vote', function () {
+        return view('pages.vote');
+    })->name('vote');
+
+    Route::get('/vote-available-page', function () {
+        return view('pages.vote-available-page');
+    })->name('vote-available');
+
+    Route::get('/vote-past-page', function () {
+        return view('pages.vote-past-page');
+    })->name('vote-past');
+
+    Route::get('/blog', function () {
+        return view('pages.blog-page');
+    })->name('blog');
+
+    Route::get('/responsibilities', function () {
+        return view('pages.responsibilities-page');
+    })->name('responsibilities');
+
+    Route::get('/responsibilities-categories', function () {
+        return view('pages.responsibilities-categories-page');
+    })->name('responsibilities-categories');
+
+    Route::get('/responsibilities-article', function () {
+        return view('pages.responsibilities-article-page');
+    })->name('responsibilities-article');
 });
