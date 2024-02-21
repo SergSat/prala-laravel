@@ -35,32 +35,32 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return view('pages/utility/404');
     })->name('404');
 
-    Route::fallback(function() {
+    Route::fallback(function () {
         return view('pages/utility/404');
     });
 
     // Our routes
-   Route::get('/home', function () {
-       return view('home');
-   })->name('home');
+    Route::get('/home', function () {
+        return view('home');
+    })->name('home');
 
-   Route::get('/index-training', function () {
-       return view('pages.index-training');
-   })->name('training');
+    Route::get('/index-training', function () {
+        return view('pages.index-training');
+    })->name('training');
 
-   Route::get('/login-default', function () {
-       return view('pages.login');
-   })->name('login-default');
+    Route::get('/login-default', function () {
+        return view('pages.login');
+    })->name('login-default');
 
-   Route::get('/login-alt', function () {
-       return view('pages.login-alt');
-   })->name('login-alt');
+    Route::get('/login-alt', function () {
+        return view('pages.login-alt');
+    })->name('login-alt');
 
-   Route::get('/tests', function () {
-       return view('pages.tests');
-   })->name('tests');
+    Route::get('/tests', function () {
+        return view('pages.tests');
+    })->name('tests');
 
-   Route::get('/test', function () {
-       return view('pages.test');
-   })->name('test');
+    Route::get('/test', function () {
+        return view('pages.test');
+    })->name('test');
 });
