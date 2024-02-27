@@ -52,6 +52,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return view('pages.staff-profession-page');
     })->name('staff-profession');
 
+    Route::get('/staff-employee', function () {
+        return view('pages.staff-employee-page');
+    })->name('staff-employee');
+
     Route::get('/home-hr', function () {
         return view('home-hr');
     })->name('home-hr');

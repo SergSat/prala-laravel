@@ -1,6 +1,6 @@
 <div class="rounded-lg bg-pr-gray-sky">
     <div class="flex flex-col items-center gap-1 p-5 text-center text-white">
-        <a href="{{ route('staff-profession') }}"
+        <a href="{{ route('staff-employee') }}"
             class="inline-block w-full text-4xl font-normal md:text-4xl xl:text-5xl">
             Водій Водій
         </a>
