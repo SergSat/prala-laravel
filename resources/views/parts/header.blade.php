@@ -140,6 +140,21 @@
 						Кабінет
 					</a>
 				</li>
+				{{-- @if ($isManager)
+				<li>
+					<a href="{{ route('') }}" class="--pr-active">
+						Підлеглі
+					</a>
+				</li>
+				@elseif ($isHR)
+				<li>
+					<a href="{{ route('') }}" class="--pr-active">
+						HR
+					</a>
+				</li>
+				@else
+				''
+				@endif --}}
 				<li>
 					<a href="{{ route('library-page') }}">
 						Бібліотека

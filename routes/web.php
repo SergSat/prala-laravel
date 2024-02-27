@@ -40,6 +40,22 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     });
 
     // Our routes
+    Route::get('/home-manager', function () {
+        return view('home-manager');
+    })->name('home-manager');
+
+    Route::get('/staff-total', function () {
+        return view('pages.staff-total-page');
+    })->name('staff-total');
+
+    Route::get('/staff-profession', function () {
+        return view('pages.staff-profession-page');
+    })->name('staff-profession');
+
+    Route::get('/home-hr', function () {
+        return view('home-hr');
+    })->name('home-hr');
+
     Route::get('/home', function () {
         return view('home');
     })->name('home');
@@ -47,6 +63,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/index-training', function () {
         return view('pages.index-training');
     })->name('training');
+
+    Route::get('/register-page', function () {
+        return view('pages.register-page');
+    })->name('register-page');
 
     Route::get('/login-default', function () {
         return view('pages.login');

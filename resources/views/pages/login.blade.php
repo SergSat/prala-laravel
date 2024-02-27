@@ -37,7 +37,7 @@
 									class="w-full text-lg placeholder-white bg-transparent border border-b border-transparent border-solid border-b-white text-pr-blue placeholder:text-lg placeholder:font-extralight focus:border-b-2 focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
 									placeholder="Логін" />
 							</div>
-							<label for="login" class="sr-only">Password</label>
+							<label for="password" class="sr-only">Password</label>
 							<div class="w-full md:mt-2">
 								<input type="password" name="password" id="password"
 									class="w-full text-3xl placeholder-white bg-transparent border border-b border-transparent border-solid border-b-white text-pr-blue placeholder:text-lg placeholder:font-extralight focus:border-b-2 focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
