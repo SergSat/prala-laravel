@@ -33,7 +33,17 @@
 
         <!-- Tasks -->
         <section class="flex flex-col lg:mx-0">
-            <h3 class="pt-5 pl-5 text-xl text-pr-blue lg:text-2xl">Завдання</h3>
+            <div class="flex items-center justify-between pt-5 text-pr-blue">
+                <h3 class="pl-5 text-xl lg:text-2xl">Завдання</h3>
+                <a href="#" class="inline-flex items-center group hover:text-pr-blueviolet">
+                    Додати завдання
+                    <div
+                        class="relative w-5 h-5 sm:w-6 sm:h-6 border ml-2 border-pr-blue group-hover:border-pr-blueviolet rounded flex items-center before:absolute  before:block before:h-3 before:w-0.5 before:shrink-0 before:rounded-md before:bg-pr-blue before:content-[''] before:left-1/2 before:transform before:-translate-x-1/2 group-hover:before:bg-pr-blueviolet after:absolute after:block after:h-0.5 after:w-3 after:shrink-0 after:rounded-md after:bg-pr-blue after:content-[''] after:left-1/2 after:transform after:-translate-x-1/2 group-hover:after:bg-pr-blueviolet">
+                        <div class="">
+                        </div>
+                    </div>
+                </a>
+            </div>
 
             @include('parts.task-item-success')
 
