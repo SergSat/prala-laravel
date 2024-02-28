@@ -115,7 +115,7 @@
 .flatpickr-day.selected.nextMonthDay,
 .flatpickr-day.startRange.nextMonthDay,
 .flatpickr-day.endRange.nextMonthDay {
-    @apply bg-pr-blue-sky text-slate-600;
+    @apply bg-pr-blue-sky text-slate-600 rounded-xl shadow-none;
 }
 
 .flatpickr-day.inRange,
@@ -132,13 +132,12 @@
 .flatpickr-day.nextMonthDay:focus,
 .flatpickr-day.today:hover,
 .flatpickr-day.today:focus {
-    @apply bg-pr-blue/70 text-slate-50;
+    @apply bg-white/70 text-slate-600 rounded-xl shadow-none;
 }
 
 .flatpickr-day.today {
     @apply bg-white/70 border-pr-blue;
 }
-
 
 .flatpickr-day.inRange,
 .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
@@ -187,12 +186,16 @@
 }
 
 .flatpickr-current-month {
-    @apply text-sm text-pr-blue;
+    @apply text-pr-blue;
     position: static;
     height: auto;
     width: auto;
     left: auto;
     padding: 0;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months.select {
+    background-image: none
 }
 
 .flatpickr-current-month span.cur-month {
@@ -218,6 +221,10 @@
 
 span.flatpickr-weekday {
     @apply text-slate-400 dark:text-slate-500 font-medium text-xs;
+}
+
+.flatpickr-day.week.selected {
+    @apply shadow-none rounded-xl;
 }
 
 .flatpickr-calendar.arrowTop::before,

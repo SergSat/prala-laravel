@@ -64,6 +64,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return view('home');
     })->name('home');
 
+    Route::get('/calendar-page', function () {
+        return view('pages.calendar-page');
+    })->name('calendar-page');
+
     Route::get('/index-training', function () {
         return view('pages.index-training');
     })->name('training');

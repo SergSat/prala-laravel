@@ -1,5 +1,6 @@
 import flatpickr from "flatpickr";
 import { Ukrainian } from "flatpickr/dist/l10n/uk";
+import weekSelectPlugin from "flatpickr/dist/plugins/weekSelect/weekSelect";
 
 // ------ Hamburger Menu -----
 (function ToggleHamburgerMenu() {
@@ -152,5 +153,14 @@ import { Ukrainian } from "flatpickr/dist/l10n/uk";
     inline: true,
     dateFormat: "Y-m-d",
     "locale": "uk",
+    "plugins": [new weekSelectPlugin({})],
+    "onChange": [function () {
+      // extract the week number
+      // note: "this" is bound to the flatpickr instance
+      const weekNumber = this.selectedDates[0]
+        ? this.config.getWeek(this.selectedDates[0])
+        : null;
+      console.log(weekNumber);
+    }]
   });
 })()

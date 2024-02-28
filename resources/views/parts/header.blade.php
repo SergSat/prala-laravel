@@ -25,7 +25,8 @@
 					</a>
 				</li>
 				<li>
-					<a href="#" class="w-full hover:opacity-60  inline-flex items-center gap-2.5">
+					<a href="{{ route('calendar-page') }}"
+						class="w-full hover:opacity-60  inline-flex items-center gap-2.5">
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
 							class="w-5 h-5">
 							<path fill-rule="evenodd" clip-rule="evenodd"
