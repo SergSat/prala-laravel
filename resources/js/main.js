@@ -1,4 +1,5 @@
 import flatpickr from "flatpickr";
+import { Ukrainian } from "flatpickr/dist/l10n/uk";
 
 // ------ Hamburger Menu -----
 (function ToggleHamburgerMenu() {
@@ -150,5 +151,6 @@ import flatpickr from "flatpickr";
   flatpickr("#calendar", {
     inline: true,
     dateFormat: "Y-m-d",
+    "locale": "uk",
   });
 })()
