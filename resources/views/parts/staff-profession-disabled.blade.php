@@ -1,8 +1,7 @@
 <div
     class="min-w-[210px] max-w-72 flex flex-col items-center w-full gap-3 p-5 bg-pr-gray-soft border rounded-lg sm:gap-5 border-pr-gray-sky">
     <picture class="flex items-center">
-        <img src="{{ Vite::asset('resources/images/') }}" alt="Звільнений співробітник"
-            class="object-cover w-24 h-24 bg-red-500 rounded-full">
+        <img src="" alt="Звільнений співробітник" class="object-cover w-24 h-24 bg-red-500 rounded-full">
     </picture>
     <div class="text-center">
         <h3 class="text-2xl">Ім'я та прізвище</h3>

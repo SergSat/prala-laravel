@@ -147,12 +147,8 @@ import flatpickr from "flatpickr";
 // ------ Calendar -----
 
 (function () {
-  var databaseDates = ['2024-02-28', '2024-03-05', '2024-03-10'];
-
   flatpickr("#calendar", {
-    inline: true, // Режим показу календаря на сторінці
-    dateFormat: "Y-m-d", // Формат дати (той же, який використовується у базі даних)
-    // defaultDate: databaseDates, // Встановіть дати з бази даних як дефолтні
-    // disable: databaseDates.map(date => new Date(date)) // Відключення дат, які вже є у базі даних
+    inline: true,
+    dateFormat: "Y-m-d",
   });
 })()

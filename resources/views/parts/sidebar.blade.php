@@ -18,8 +18,14 @@
 		</div>
 	</section>
 
-	<section class="flex items-center justify-center">
-		<div id="calendar" class="border-b border-pr-gray-sky "></div>
-		<hr>
+	<section class="flex flex-col items-center justify-center gap-2">
+		<div id="calendar"></div>
+		<div class="w-10/12 py-5 border-t border-pr-blue-sky">
+			<ul>
+				<li
+					class="flex items-center text-balance text-sm before:mr-2 before:block before:h-1.5 before:w-1.5 before:shrink-0 before:rounded-full before:bg-pr-blue before:content-[''] sm:text-base">
+					14:30 Конференція</li>
+			</ul>
+		</div>
 	</section>
 </aside>
