@@ -1,3 +1,4 @@
+import flatpickr from "flatpickr";
 
 // ------ Hamburger Menu -----
 (function ToggleHamburgerMenu() {
@@ -95,9 +96,9 @@
   let tabs = document.querySelectorAll('.tab');
   let indicator = document.querySelector('.--pr-indicator');
   let panels = document.querySelectorAll('.tab-panel');
-  let parentRect = tabs[0].parentElement.getBoundingClientRect();
+  let parentRect = tabs.length > 0 ? tabs[0].parentElement.getBoundingClientRect() : null;
 
-  if (!tabs.length || !indicator || !panels.length) {
+  if (!tabs.length || !indicator || !panels.length || !parentRect) {
     console.error('Необхідні елементи не знайдено на сторінці');
     return;
   }
@@ -142,3 +143,16 @@
     });
   });
 })();
+
+// ------ Calendar -----
+
+(function () {
+  var databaseDates = ['2024-02-28', '2024-03-05', '2024-03-10'];
+
+  flatpickr("#calendar", {
+    inline: true, // Режим показу календаря на сторінці
+    dateFormat: "Y-m-d", // Формат дати (той же, який використовується у базі даних)
+    // defaultDate: databaseDates, // Встановіть дати з бази даних як дефолтні
+    // disable: databaseDates.map(date => new Date(date)) // Відключення дат, які вже є у базі даних
+  });
+})()
