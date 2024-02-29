@@ -20,64 +20,122 @@
                 </svg>
                 <span class="ml-2 text-lg group-hover:opacity-60">Всі співробітники</span>
             </a>
-            <div class="h-6 border-l border-black"></div>
+            <div class="h-full border-l border-black"></div>
             <h3 class="text-xl text-pr-blue">Співробітник / Підлеглий</h3>
         </div>
         {{-- Link to Staff by Profession Page --}}
 
-        {{-- Staff Employee Profile --}}
-        <div class="p-5 bg-white w-max mt-7 lg:p-8 lg:mt-5 rounded-xl drop-shadow-lg">
-            @include('parts.staff-profession')
-        </div>
-        {{-- Staff Employee Profile --}}
-
-        <!-- Tasks -->
-        <section class="flex flex-col lg:mx-0">
-            <div class="flex items-center justify-between pt-5 text-pr-blue">
-                <h3 class="pl-5 text-xl lg:text-2xl">Завдання</h3>
-                <a href="#" class="inline-flex items-center group hover:text-pr-blueviolet">
-                    Додати завдання
-                    <div
-                        class="relative w-5 h-5 sm:w-6 sm:h-6 border ml-2 border-pr-blue group-hover:border-pr-blueviolet rounded flex items-center before:absolute  before:block before:h-3 before:w-0.5 before:shrink-0 before:rounded-md before:bg-pr-blue before:content-[''] before:left-1/2 before:transform before:-translate-x-1/2 group-hover:before:bg-pr-blueviolet after:absolute after:block after:h-0.5 after:w-3 after:shrink-0 after:rounded-md after:bg-pr-blue after:content-[''] after:left-1/2 after:transform after:-translate-x-1/2 group-hover:after:bg-pr-blueviolet">
-                        <div class="">
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            @include('parts.task-item-success')
-
-            @include('parts.task-item')
-
-            @include('parts.task-item-success')
-
-            @include('parts.task-item')
-
-            @include('parts.task-item-success')
-
-            @include('parts.task-item')
-        </section>
-        <!-- Tasks -->
-
-        <!-- Training -->
-        <section class="block">
-            <div
-                class="flex flex-col max-w-xl px-10 pb-10 mx-auto text-center bg-white mt-7 min-w-16 rounded-xl drop-shadow-lg lg:mx-0 lg:mt-0">
-                <h3 class="pt-5 text-xl text-pr-blue lg:text-2xl">Навчання</h3>
-
-                <div class="grid grid-rows-4">
-                    @include('parts.trainig-profession')
-
-                    @include('parts.trainig-profession')
-
-                    @include('parts.trainig-profession')
-
-                    @include('parts.trainig-profession')
+        <div class="grid w-full grid-cols-1 gap-6 p-5 md:gap-8 mt-7 xl:grid-cols-2 lg:p-8 lg:mt-5">
+            {{-- Staff Employee Profile --}}
+            <div>
+                <div class="p-5 bg-white w-max lg:p-8 lg:mt-5 rounded-xl drop-shadow-lg">
+                    @include('parts.staff-profession')
                 </div>
             </div>
-        </section>
-        <!-- Training -->
+            {{-- Staff Employee Profile --}}
 
+            <!-- Tasks -->
+            <section class="w-full max-w-xl flex flex-col lg:mx-0 @container">
+                <div class="flex items-center justify-between pt-5 text-pr-blue">
+                    <h3 class="pl-5 text-xl lg:text-2xl">Завдання</h3>
+                    <a href="#" class="inline-flex items-center group hover:text-pr-blueviolet">
+                        Додати завдання
+                        <div
+                            class="relative w-5 h-5 sm:w-6 sm:h-6 border ml-2 border-pr-blue group-hover:border-pr-blueviolet rounded flex items-center before:absolute  before:block before:h-3 before:w-0.5 before:shrink-0 before:rounded-md before:bg-pr-blue before:content-[''] before:left-1/2 before:transform before:-translate-x-1/2 group-hover:before:bg-pr-blueviolet after:absolute after:block after:h-0.5 after:w-3 after:shrink-0 after:rounded-md after:bg-pr-blue after:content-[''] after:left-1/2 after:transform after:-translate-x-1/2 group-hover:after:bg-pr-blueviolet">
+                        </div>
+                    </a>
+                </div>
+
+                @include('parts.employee-task-success')
+
+                @include('parts.employee-task')
+
+                @include('parts.employee-task-success')
+
+                @include('parts.employee-task')
+
+                @include('parts.employee-task-success')
+
+                @include('parts.employee-task')
+            </section>
+            <!-- Tasks -->
+
+            <!-- Tests -->
+            <section class="block">
+                <div class="flex flex-col max-w-xl drop-shadow-lg">
+                    <div class="flex justify-between px-5 lg:px-8">
+                        <h3 class="text-xl text-pr-blue lg:text-2xl">Тести</h3>
+
+                        <div class="grid group place-items-center gap-y-1">
+                            <a href="#"
+                                class="transition-colors duration-200 text-pr-blue group-hover:text-pr-blueviolet">
+                                Читати все
+                            </a>
+                            <a href="#" class="transition duration-200 ease-in-out delay-150 group-hover:translate-x-3">
+                                <svg width="56" height="12" viewBox="0 0 56 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        class="transition-colors duration-200 group-hover:group-hover:stroke-pr-blueviolet"
+                                        d="M0.368164 6.52734L54.6318 6.52734" stroke="#302CFF"
+                                        stroke-width="0.669922" />
+                                    <path
+                                        class="transition-colors duration-200 group-hover:group-hover:stroke-pr-blueviolet"
+                                        d="M47.0957 11.3008L54.6323 6.52759L47.0957 1.00073" stroke="#302CFF"
+                                        stroke-width="0.669922" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-5 p-5 mt-5 bg-white lg:p-8 rounded-xl">
+                        @include('parts.employee-test')
+                        @include('parts.employee-test')
+                        @include('parts.employee-test-success')
+                        @include('parts.employee-test')
+                        @include('parts.employee-test-success')
+                    </div>
+                </div>
+            </section>
+            <!-- Tests -->
+
+            <!-- Practicals -->
+            <section class="block">
+                <div class="flex flex-col max-w-xl drop-shadow-lg">
+                    <div class="flex justify-between px-5 lg:px-8">
+                        <h3 class="text-xl text-pr-blue lg:text-2xl">Практичні</h3>
+
+                        <div class="grid group place-items-center gap-y-1">
+                            <a href="#"
+                                class="transition-colors duration-200 text-pr-blue group-hover:text-pr-blueviolet">
+                                Читати все
+                            </a>
+                            <a href="#" class="transition duration-200 ease-in-out delay-150 group-hover:translate-x-3">
+                                <svg width="56" height="12" viewBox="0 0 56 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        class="transition-colors duration-200 group-hover:group-hover:stroke-pr-blueviolet"
+                                        d="M0.368164 6.52734L54.6318 6.52734" stroke="#302CFF"
+                                        stroke-width="0.669922" />
+                                    <path
+                                        class="transition-colors duration-200 group-hover:group-hover:stroke-pr-blueviolet"
+                                        d="M47.0957 11.3008L54.6323 6.52759L47.0957 1.00073" stroke="#302CFF"
+                                        stroke-width="0.669922" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-5 p-5 mt-5 bg-white lg:p-8 rounded-xl">
+                        @include('parts.employee-practical')
+                        @include('parts.employee-practical')
+                        @include('parts.employee-practical-success')
+                        @include('parts.employee-practical')
+                        @include('parts.employee-practical-success')
+                    </div>
+                </div>
+            </section>
+            <!-- Practicals -->
+        </div>
     </section>
     <!-- Staff Employee -->
 

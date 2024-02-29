@@ -16,7 +16,7 @@
     .--pr-success p::before {
         @apply bg-pr-green;
     }
-    
+
     .--pr-active {
         @apply text-pr-blue underline underline-offset-2 hover:text-pr-blueviolet hover:fill-pr-blueviolet;
     }
