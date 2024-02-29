@@ -30,6 +30,9 @@
 		<!-- Sidebar -->
 		@include('parts.sidebar')
 	</div>
+
+	<!-- Modal -->
+	@include('parts.modal')
 	<!-- Scripts -->
 	@vite('resources/js/app.js')
 </body>

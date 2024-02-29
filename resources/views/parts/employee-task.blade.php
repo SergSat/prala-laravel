@@ -5,8 +5,8 @@
         Тест “Массажист Стоп Начальника”
     </p>
     <div class="flex items-center gap-4">
-        <p class="text-sm whitespace-nowrap sm:text-base">Завершено</p>
-        <button class="opacity-40 hover:opacity-100">
+        <p class="text-sm whitespace-nowrap sm:text-base">В очікуванні</p>
+        <button class="opacity-40 hover:opacity-100 active:opacity-100">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 6H5H21" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 <path

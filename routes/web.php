@@ -60,6 +60,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return view('home-hr');
     })->name('home-hr');
 
+    Route::get('/hr-staff-total', function () {
+        return view('pages.hr-staff-total-page');
+    })->name('hr-staff-total');
+
+    Route::get('/hr-staff-profession', function () {
+        return view('pages.hr-staff-profession-page');
+    })->name('hr-staff-profession');
+
     Route::get('/home', function () {
         return view('home');
     })->name('home');

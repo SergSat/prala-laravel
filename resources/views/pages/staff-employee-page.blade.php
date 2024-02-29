@@ -25,10 +25,13 @@
         </div>
         {{-- Link to Staff by Profession Page --}}
 
-        <div class="grid w-full grid-cols-1 gap-6 p-5 md:gap-8 mt-7 xl:grid-cols-2 lg:p-8 lg:mt-5">
+        <div class="grid w-full grid-cols-1 gap-6 p-5 md:gap-8 xl:grid-cols-2 lg:p-8 mt-7 lg:mt-0">
             {{-- Staff Employee Profile --}}
             <div>
-                <div class="p-5 bg-white w-max lg:p-8 lg:mt-5 rounded-xl drop-shadow-lg">
+                <div class="flex justify-between px-5 lg:px-8">
+                    <h3 class="text-xl text-pr-blue lg:text-2xl">Співробітник</h3>
+                </div>
+                <div class="p-5 mt-5 bg-white w-max lg:p-8 rounded-xl drop-shadow-lg">
                     @include('parts.staff-profession')
                 </div>
             </div>
@@ -36,7 +39,7 @@
 
             <!-- Tasks -->
             <section class="w-full max-w-xl flex flex-col lg:mx-0 @container">
-                <div class="flex items-center justify-between pt-5 text-pr-blue">
+                <div class="flex items-center justify-between pt-5 lg:pt-0 text-pr-blue">
                     <h3 class="pl-5 text-xl lg:text-2xl">Завдання</h3>
                     <a href="#" class="inline-flex items-center group hover:text-pr-blueviolet">
                         Додати завдання
@@ -67,11 +70,12 @@
                         <h3 class="text-xl text-pr-blue lg:text-2xl">Тести</h3>
 
                         <div class="grid group place-items-center gap-y-1">
-                            <a href="#"
+                            <a href="{{ route('tests') }}"
                                 class="transition-colors duration-200 text-pr-blue group-hover:text-pr-blueviolet">
                                 Читати все
                             </a>
-                            <a href="#" class="transition duration-200 ease-in-out delay-150 group-hover:translate-x-3">
+                            <a href="{{ route('tests') }}"
+                                class="transition duration-200 ease-in-out delay-150 group-hover:translate-x-3">
                                 <svg width="56" height="12" viewBox="0 0 56 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -127,7 +131,7 @@
 
                     <div class="flex flex-col gap-5 p-5 mt-5 bg-white lg:p-8 rounded-xl">
                         @include('parts.employee-practical')
-                        @include('parts.employee-practical')
+                        @include('parts.employee-practical-success')
                         @include('parts.employee-practical-success')
                         @include('parts.employee-practical')
                         @include('parts.employee-practical-success')

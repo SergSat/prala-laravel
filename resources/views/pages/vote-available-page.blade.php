@@ -20,7 +20,7 @@
                 </svg>
                 <span class="ml-2 text-lg group-hover:opacity-60">Всі голосування</span>
             </a>
-            <div class="h-6 border-l border-black"></div>
+            <div class="border-l border-black full"></div>
             <h3 class="text-xl text-pr-blue">Назва голосування</h3>
         </div>
         {{-- Link to Votes Page --}}
