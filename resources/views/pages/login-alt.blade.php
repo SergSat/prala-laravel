@@ -29,8 +29,8 @@
 
 				<div
 					class="mb-5 mt-10 w-full rounded-2xl border border-white bg-white/15 px-6 pb-12 pt-9 backdrop-blur max-[380px]:px-5 max-[380px]:pb-10 max-[380px]:pt-8 min-[480px]:px-12 sm:mb-10 sm:px-16 sm:pb-16">
-					<div class="flex flex-col items-center justify-between gap-16">
-						<div class="flex flex-col items-start justify-between w-full gap-5 md:justify-around lg:gap-10">
+					<div class="flex flex-col items-center justify-between gap-12">
+						<div class="flex flex-col items-start justify-between w-full gap-5 md:justify-around lg:gap-8">
 							<label for="login" class="sr-only">Login</label>
 							<div class="w-full md:mt-2">
 								<input type="text" name="login" id="login"
