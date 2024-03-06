@@ -12,8 +12,8 @@
                 <div class="flex flex-col items-center justify-between gap-16">
                     <div class="flex flex-col items-start justify-between w-full gap-5 md:justify-around lg:gap-10">
                         <div class="w-full md:mt-2">
-                            <x-label for="name" class="sr-only">Full Name</x-label>
-                            <x-input
+                            <x-admin.label for="name" class="sr-only">Full Name</x-admin.label>
+                            <x-admin.input
                                     class="text-lg placeholder-white bg-transparent border border-b border-transparent border-solid border-b-white text-pr-blue placeholder:text-lg placeholder:font-extralight focus:border-b-2 focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
                                     id="name"
                                     type="text"
@@ -24,7 +24,7 @@
                         </div>
 
                         <div class="w-full md:mt-2">
-                            <x-label for="email" class="sr-only">Email Address</x-label>
+                            <x-admin.label for="email" class="sr-only">Email Address</x-admin.label>
                             <input type="email" name="email" id="email"
                                    class="w-full text-lg placeholder-white bg-transparent border border-b border-transparent border-solid border-b-white text-pr-blue placeholder:text-lg placeholder:font-extralight focus:border-b-2 focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
                                    placeholder="Ваш Email" />
@@ -64,23 +64,23 @@
         @csrf
         <div class="space-y-4">
             <div>
-                <x-label for="name">{{ __('Full Name') }} <span class="text-rose-500">*</span></x-label>
-                <x-input id="name" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-admin.label for="name">{{ __('Full Name') }} <span class="text-rose-500">*</span></x-admin.label>
+                <x-admin.input id="name" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
             <div>
-                <x-label for="email">{{ __('Email Address') }} <span class="text-rose-500">*</span></x-label>
-                <x-input id="email" type="email" name="email" :value="old('email')" required />
+                <x-admin.label for="email">{{ __('Email Address') }} <span class="text-rose-500">*</span></x-admin.label>
+                <x-admin.input id="email" type="email" name="email" :value="old('email')" required />
             </div>
 
             <div>
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" type="password" name="password" required autocomplete="new-password" />
+                <x-admin.label for="password" value="{{ __('Password') }}" />
+                <x-admin.input id="password" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div>
-                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" />
+                <x-admin.label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                <x-admin.input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
         </div>
         <div class="flex items-center justify-between mt-6">
@@ -90,9 +90,9 @@
 {{--                    <span class="text-sm ml-2">Email me about product news.</span>--}}
 {{--                </label>--}}
 {{--            </div>--}}
-            <x-button>
+            <x-admin.button>
                 {{ __('Sign Up') }}
-            </x-button>                
+            </x-admin.button>
         </div>
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-6">
@@ -108,7 +108,7 @@
                 </div>
             @endif        
     </form>
-    <x-validation-errors class="mt-4" />  
+    <x-admin.validation-errors class="mt-4" />
     <!-- Footer -->
     <div class="pt-5 mt-6 border-t border-slate-200 dark:border-slate-700">
         <div class="text-sm">

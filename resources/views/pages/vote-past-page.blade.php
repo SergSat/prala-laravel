@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('content')
 <article class="grid w-full gap-5 lg:pt-24">

@@ -43,10 +43,10 @@
                         @endif
                         <div
                             class="grid mt-3 bg-transparent border border-white rounded-lg group w-28 shrink-0 place-items-center hover:border-pr-blue/40 hover:bg-pr-blue/5 md:w-36">
-                            <x-button
+                            <x-admin.button
                                 class="w-full px-2 py-1 text-xl tracking-wider text-center text-white transition-colors duration-200 justify-self-center font-extralight focus:border-b-2 focus:border-pr-blue/40 focus:outline-none focus:ring-0 group-hover:text-pr-blue/60 md:p-3 lg:text-2xl">
                                 {{ __('Увійти') }}
-                            </x-button>
+                            </x-admin.button>
                         </div>
                     </div>
 

@@ -1,66 +1,40 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap" rel="stylesheet" />
+	<title>Prala</title>
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.bunny.net" />
+	<link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
-        <!-- Styles -->
-        @livewireStyles        
+	<!-- Stylesheet -->
+	@vite('resources/css/app.css')
+</head>
 
-        <script>
-            if (localStorage.getItem('dark-mode') === 'false' || !('dark-mode' in localStorage)) {
-                document.querySelector('html').classList.remove('dark');
-                document.querySelector('html').style.colorScheme = 'light';
-            } else {
-                document.querySelector('html').classList.add('dark');
-                document.querySelector('html').style.colorScheme = 'dark';
-            }
-        </script>
-    </head>
-    <body
-        class="font-inter antialiased bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400"
-        :class="{ 'sidebar-expanded': sidebarExpanded }"
-        x-data="{ sidebarOpen: false, sidebarExpanded: localStorage.getItem('sidebar-expanded') == 'true' }"
-        x-init="$watch('sidebarExpanded', value => localStorage.setItem('sidebar-expanded', value))"    
-    >
+<body class="font-light scroll-smooth lg:overflow-auto">
+	<div class="relative flex h-min">
+		<div class="w-full min-h-screen bg-pr-beige lg:w-3/4 lg:bg-pr-blue-sky">
+			<!-- Header -->
+			@include('parts.header')
 
-        <script>
-            if (localStorage.getItem('sidebar-expanded') == 'true') {
-                document.querySelector('body').classList.add('sidebar-expanded');
-            } else {
-                document.querySelector('body').classList.remove('sidebar-expanded');
-            }
-        </script>
+			<!-- Main -->
+			<main class="px-5 pb-5 sm:px-8 md:px-10 lg:px-5">
+				@yield('content')
+			</main>
+		</div>
 
-        <!-- Page wrapper -->
-        <div class="flex h-[100dvh] overflow-hidden">
+		<!-- Sidebar -->
+		@include('parts.sidebar')
+	</div>
 
-            <x-app.sidebar />
+	<!-- Modal -->
+	@include('parts.modal')
+	<!-- Scripts -->
+	@vite('resources/js/app.js')
+</body>
 
-            <!-- Content area -->
-            <div class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden @if($attributes['background']){{ $attributes['background'] }}@endif" x-ref="contentarea">
-
-                <x-app.header />
-
-                <main class="grow">
-                    {{ $slot }}
-                </main>
-
-            </div>
-
-        </div>
-
-        @livewireScripts
-    </body>
 </html>
