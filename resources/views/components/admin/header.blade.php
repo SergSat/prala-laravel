@@ -26,22 +26,22 @@
             <div class="flex items-center space-x-3">
 
                 <!-- Search Button with Modal -->
-                <x-modal-search />
+                <x-admin.modal-search />
 
                 <!-- Notifications button -->
-                <x-dropdown-notifications align="right" />
+                <x-admin.dropdown-notifications align="right" />
 
                 <!-- Info button -->
-                <x-dropdown-help align="right" />
+                <x-admin.dropdown-help align="right" />
 
                 <!-- Dark mode toggle -->
-                <x-theme-toggle />                
+                <x-admin.theme-toggle />
 
                 <!-- Divider -->
                 <hr class="w-px h-6 bg-slate-200 dark:bg-slate-700 border-none" />
 
                 <!-- User button -->
-                <x-dropdown-profile align="right" />
+                <x-admin.dropdown-profile align="right" />
 
             </div>
 

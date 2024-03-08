@@ -44,11 +44,12 @@
                         </div>
                     </div>
 
-                    <div class="grid bg-transparent shrink-0 place-items-center">
-                        <x-button
-                            class="w-full px-2 py-1 text-xl tracking-wider text-center text-white transition-colors duration-200 border border-white rounded-lg justify-self-center font-extralight focus:border focus:rounded-lg hover:border-pr-blue/40 hover:bg-pr-blue/5 focus:border-pr-blue/40 focus:text-pr-blue focus:outline-none focus:ring-0 hover:text-pr-blue/60 md:p-3 lg:text-2xl">
+                    <div
+                        class="grid bg-transparent border border-white rounded-lg group shrink-0 place-items-center hover:border-pr-blue/40 hover:bg-pr-blue/5">
+                        <x-admin.button
+                            class="w-full px-2 py-1 text-xl tracking-wider text-center text-white transition-colors duration-200 justify-self-center font-extralight focus:border-b-2 focus:border-pr-blue/40 focus:outline-none focus:ring-0 group-hover:text-pr-blue/60 md:p-3 lg:text-2xl">
                             Зареєструватись
-                        </x-button>
+                        </x-admin.button>
                     </div>
                     <x-validation-errors />
                 </div>

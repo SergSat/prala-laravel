@@ -10,12 +10,12 @@
         @csrf
         <div class="space-y-4">
             <div>
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" type="email" name="email" :value="old('email')" required autofocus />                
+                <x-admin.label for="email" value="{{ __('Email') }}" />
+                <x-admin.input id="email" type="email" name="email" :value="old('email')" required autofocus />
             </div>
             <div>
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" type="password" name="password" required autocomplete="current-password" />                
+                <x-admin.label for="password" value="{{ __('Password') }}" />
+                <x-admin.input id="password" type="password" name="password" required autocomplete="current-password" />
             </div>
         </div>
         <div class="flex items-center justify-between mt-6">
@@ -26,12 +26,12 @@
                     </a>
                 </div>
             @endif            
-            <x-button class="ml-3">
+            <x-admin.button class="ml-3">
                 {{ __('Sign in') }}
-            </x-button>            
+            </x-admin.button>
         </div>
     </form>
-    <x-validation-errors class="mt-4" />   
+    <x-admin.validation-errors class="mt-4" />
     <!-- Footer -->
     <div class="pt-5 mt-6 border-t border-slate-200 dark:border-slate-700">
         <div class="text-sm">
