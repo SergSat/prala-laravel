@@ -6,7 +6,7 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
             <div class="mt-2 text-center text-white">
-                <h1 class="text-3xl tracking-widest font-extralight">Сторінка Реєстрації</h1>
+                <h1 class="text-3xl tracking-widest font-extralight">{{ __('registration_page') }}</h1>
             </div>
 
             <div
@@ -17,22 +17,22 @@
                             <x-label for="name" class="sr-only">Full Name</x-label>
                             <x-input
                                 class="text-lg placeholder-white bg-transparent border border-b border-transparent border-solid border-b-white text-pr-blue placeholder:text-lg placeholder:font-extralight focus:border-b focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
-                                id="name" type="text" name="name" placeholder="Логін" :value="old('name')" required
-                                autofocus autocomplete="name" />
+                                id="name" type="text" name="name" placeholder="{{ __('login') }}" :value="old('name')"
+                                required autofocus autocomplete="name" />
                         </div>
                         <div class="w-full">
                             <x-label for="email" class="sr-only">Email Address</x-label>
                             <x-input
                                 class="text-lg placeholder-white bg-transparent border border-b border-transparent border-solid border-b-white text-pr-blue placeholder:text-lg placeholder:font-extralight focus:border-b focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
-                                id="email" type="text" name="email" placeholder="Ваш Email" :value="old('email')"
-                                required autocomplete="email" />
+                                id="email" type="text" name="email" placeholder="{{ __('your_email') }}"
+                                :value="old('email')" required autocomplete="email" />
                         </div>
                         <div class="w-full">
                             <x-label for="password" value="Password" class="sr-only" />
                             <x-input
                                 class="w-full text-lg placeholder-white bg-transparent border border-b border-transparent border-solid border-b-white text-pr-blue placeholder:text-lg placeholder:font-extralight focus:border-b focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
-                                id="password" type="password" name="password" placeholder="Пароль" required
-                                autocomplete="new-password" />
+                                id="password" type="password" name="password" placeholder="{{ __('password') }}"
+                                required autocomplete="new-password" />
                         </div>
 
                         <div class="w-full">
@@ -40,14 +40,14 @@
                             <x-input
                                 class="w-full text-lg placeholder-white bg-transparent border border-b border-transparent border-solid border-b-white text-pr-blue placeholder:text-lg placeholder:font-extralight focus:border-b focus:border-transparent focus:border-b-pr-blue focus:outline-none focus:ring-0"
                                 id="password_confirmation" type="password" name="password_confirmation"
-                                placeholder="Підтвердіть ваш пароль" required autocomplete="new-password" />
+                                placeholder="{{ __('confirm_your_password') }}" required autocomplete="new-password" />
                         </div>
                     </div>
 
                     <div class="grid bg-transparent shrink-0 place-items-center">
                         <x-admin.button
                             class="w-full px-2 py-1 text-xl tracking-wider text-center text-white transition-colors duration-200 border border-white rounded-lg justify-self-center font-extralight focus:border focus:rounded-lg hover:border-pr-blue/40 hover:bg-pr-blue/5 focus:border-pr-blue/40 focus:text-pr-blue focus:outline-none focus:ring-0 hover:text-pr-blue/60 md:p-3 lg:text-2xl">
-                            Зареєструватись
+                            {{ __('sign_up') }}
                         </x-admin.button>
                     </div>
                     <x-validation-errors />
@@ -55,8 +55,9 @@
             </div>
             <div class="py-5">
                 <div class="text-sm text-white">
-                    {{ __('Вже є акаунт?') }} <a class="ml-1 font-medium text-pr-blue/80 hover:text-pr-blue/60"
-                        href="{{ route('login') }}">{{ __('Зайти на сайт') }}</a>
+                    {{ __('already_have_an_account') }} <a
+                        class="ml-1 font-medium text-pr-blue/80 hover:text-pr-blue/60" href="{{ route('login') }}">{{
+                        __('sign_in') }}</a>
                 </div>
             </div>
         </form>
