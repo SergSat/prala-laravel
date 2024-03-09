@@ -1,6 +1,6 @@
 <x-admin.form-section submit="updateProfileInformation">
     <x-slot name="title">
-        {{ __('Profile Information') }}
+        {{ __('admin.profile_information') }}
     </x-slot>
 
     <x-slot name="description">

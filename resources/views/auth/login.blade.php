@@ -54,7 +54,7 @@
             </div>
             <div class="py-5">
                 <div class="text-sm text-white">
-                    {{ __('Немає акаунту?') }} <a class="ml-1 font-medium text-pr-blue/80 hover:text-pr-blue/60"
+                    {{ __('dont_have_account') }} <a class="ml-1 font-medium text-pr-blue/80 hover:text-pr-blue/60"
                         href="{{ route('register') }}">{{ __('Зареєструватись') }}</a>
                 </div>
             </div>
