@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div id="modal" class="fixed inset-0 z-40 overflow-hidden bg-black/50">
+<div id="modal" class="fixed inset-0 z-40 hidden overflow-hidden bg-black/50">
     <div class="z-50 flex items-center justify-center w-full min-h-screen">
         <div class="relative w-full max-w-screen-md p-8 overflow-hidden bg-white shadow-lg rounded-2xl">
             <div class="relative flex flex-col justify-between">
