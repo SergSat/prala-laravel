@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('content')
 <article class="grid w-full grid-flow-row grid-cols-1 gap-5 lg:grid-cols-1 lg:pt-24">
@@ -21,7 +21,7 @@
 					</svg>
 					<span class="ml-2 text-lg group-hover:opacity-60">Обов’язки та компетенції</span>
 				</a>
-				<div class="h-6 border-l border-black"></div>
+				<div class="h-full border-l border-black"></div>
 				<h3 class="text-xl text-pr-blue">Стаття 1</h3>
 			</div>
 			{{-- Link to Categories --}}

@@ -9,14 +9,14 @@
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
         <div>
-            <x-label for="email">{{ __('Email Address') }} <span class="text-rose-500">*</span></x-label>
-            <x-input id="email" type="email" name="email" :value="old('email')" required autofocus />                
+            <x-admin.label for="email">{{ __('Email Address') }} <span class="text-rose-500">*</span></x-admin.label>
+            <x-admin.input id="email" type="email" name="email" :value="old('email')" required autofocus />
         </div>
         <div class="flex justify-end mt-6">
-            <x-button>
+            <x-admin.button>
                 {{ __('Send Reset Link') }}
-            </x-button>
+            </x-admin.button>
         </div>
     </form>
-    <x-validation-errors class="mt-4" /> 
+    <x-admin.validation-errors class="mt-4" />
 </x-authentication-layout>

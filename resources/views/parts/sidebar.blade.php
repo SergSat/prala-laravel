@@ -1,5 +1,5 @@
 <aside
-	class="fixed inset-y-0 right-0 flex flex-col items-center justify-between min-h-screen py-10 transition duration-300 ease-linear transform translate-x-full bg-pr-beige lg:w-1/4 lg:translate-x-0">
+	class="min-w-[300px] fixed inset-y-0 right-0 flex flex-col items-center justify-between min-h-screen py-10 transition duration-300 ease-linear transform translate-x-full bg-pr-beige lg:w-1/4 lg:translate-x-0">
 	<img width="200" height="50" src="{{ Vite::asset('resources/images/prala_logo1.svg') }}" alt="logo-prala"
 		class="h-16 w-50" />
 
@@ -18,5 +18,14 @@
 		</div>
 	</section>
 
-	<section class="flex items-center justify-center p-10">Calendar</section>
+	<section class="flex flex-col items-center justify-center gap-2">
+		<div id="calendar"></div>
+		<div class="w-10/12 py-5 border-t border-pr-blue-sky">
+			<ul>
+				<li
+					class="flex items-center text-balance text-sm before:mr-2 before:block before:h-1.5 before:w-1.5 before:shrink-0 before:rounded-full before:bg-pr-blue before:content-[''] sm:text-base">
+					14:30 Конференція</li>
+			</ul>
+		</div>
+	</section>
 </aside>

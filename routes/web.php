@@ -1,14 +1,7 @@
 <?php
 
-use App\Http\Controllers\CampaignController;
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DataFeedController;
-use App\Http\Controllers\InvoiceController;
-use App\Http\Controllers\JobController;
-use App\Http\Controllers\MemberController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Jetstream\UserProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,9 +19,6 @@ Route::redirect('/', 'login');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
-    // Route for the getting the data feed
-    Route::get('/json-data-feed', [DataFeedController::class, 'getDataFeed'])->name('json_data_feed');
-
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/utility/404', function () {
@@ -40,13 +30,49 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     });
 
     // Our routes
+    Route::get('/home-manager', function () {
+        return view('home-manager');
+    })->name('home-manager');
+
+    Route::get('/staff-total', function () {
+        return view('pages.staff-total-page');
+    })->name('staff-total');
+
+    Route::get('/staff-profession', function () {
+        return view('pages.staff-profession-page');
+    })->name('staff-profession');
+
+    Route::get('/staff-employee', function () {
+        return view('pages.staff-employee-page');
+    })->name('staff-employee');
+
+    Route::get('/home-hr', function () {
+        return view('home-hr');
+    })->name('home-hr');
+
+    Route::get('/hr-staff-total', function () {
+        return view('pages.hr-staff-total-page');
+    })->name('hr-staff-total');
+
+    Route::get('/hr-staff-profession', function () {
+        return view('pages.hr-staff-profession-page');
+    })->name('hr-staff-profession');
+
     Route::get('/home', function () {
         return view('home');
     })->name('home');
 
+    Route::get('/calendar-page', function () {
+        return view('pages.calendar-page');
+    })->name('calendar-page');
+
     Route::get('/index-training', function () {
         return view('pages.index-training');
     })->name('training');
+
+    Route::get('/register-page', function () {
+        return view('pages.register-page');
+    })->name('register-page');
 
     Route::get('/login-default', function () {
         return view('pages.login');
