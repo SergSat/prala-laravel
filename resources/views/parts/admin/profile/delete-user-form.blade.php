@@ -1,39 +1,40 @@
 <x-admin.action-section>
     <x-slot name="title">
-        {{ __('Delete Account') }}
+        {{ __('admin.delete_account') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Permanently delete your account.') }}
+        {{ __('admin.permanently_delete_your_account').'.' }}
     </x-slot>
 
     <x-slot name="content">
         <div class="max-w-xl text-sm text-gray-600 dark:text-gray-400">
-            {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
+            {{ __('Після видалення вашого облікового запису всі його ресурси та дані будуть видалені назавжди. Перш ніж
+            видалите ваш обліковий запис, будь ласка, завантажте всі дані або інформацію, які ви хочете зберегти.') }}
         </div>
 
         <div class="mt-5">
             <x-admin.danger-button wire:click="confirmUserDeletion" wire:loading.attr="disabled">
-                {{ __('Delete Account') }}
+                {{ __('admin.delete_account') }}
             </x-admin.danger-button>
         </div>
 
         <!-- Delete User Confirmation Modal -->
         <x-admin.dialog-modal wire:model.live="confirmingUserDeletion">
             <x-slot name="title">
-                {{ __('Delete Account') }}
+                {{ __('admin.delete_account') }}
             </x-slot>
 
             <x-slot name="content">
-                {{ __('Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
+                {{ __('Ви впевнені, що хочете видалити свій обліковий запис? Після видалення вашого акаунта всі його
+                ресурси і дані будуть безповоротно видалені. Будь ласка, введіть свій пароль, щоб підтвердити, що ви
+                хочете назавжди видалити свій обліковий запис.') }}
 
-                <div class="mt-4" x-data="{}" x-on:confirming-delete-user.window="setTimeout(() => $refs.password.focus(), 250)">
-                    <x-admin.input type="password" class="mt-1 block w-3/4"
-                                autocomplete="current-password"
-                                placeholder="{{ __('Password') }}"
-                                x-ref="password"
-                                wire:model="password"
-                                wire:keydown.enter="deleteUser" />
+                <div class="mt-4" x-data="{}"
+                    x-on:confirming-delete-user.window="setTimeout(() => $refs.password.focus(), 250)">
+                    <x-admin.input type="password" class="block w-3/4 mt-1" autocomplete="current-password"
+                        placeholder="{{ __('admin.password') }}" x-ref="password" wire:model="password"
+                        wire:keydown.enter="deleteUser" />
 
                     <x-admin.input-error for="password" class="mt-2" />
                 </div>
@@ -41,11 +42,11 @@
 
             <x-slot name="footer">
                 <x-admin.secondary-button wire:click="$toggle('confirmingUserDeletion')" wire:loading.attr="disabled">
-                    {{ __('Cancel') }}
+                    {{ __('admin.cancel') }}
                 </x-admin.secondary-button>
 
                 <x-admin.danger-button class="ms-3" wire:click="deleteUser" wire:loading.attr="disabled">
-                    {{ __('Delete Account') }}
+                    {{ __('admin.delete_account') }}
                 </x-admin.danger-button>
             </x-slot>
         </x-admin.dialog-modal>

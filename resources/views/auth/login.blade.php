@@ -6,7 +6,7 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="mt-2 text-center text-white">
-                <h1 class="text-3xl tracking-widest font-extralight">Вхід</h1>
+                <h1 class="text-3xl tracking-widest font-extralight">{{ __('login') }}</h1>
                 <h2 class="text-xl tracking-widest font-extralight">{{ __('') }}</h2>
                 @if (session('status'))
                 <div class="mb-4 text-sm font-medium text-green-600">
@@ -37,14 +37,14 @@
                         @if (Route::has('password.request'))
                         <div class="text-center">
                             <a class="text-white text-md hover:text-pr-blue/60" href="{{ route('password.request') }}">
-                                {{ __('Забули пароль?') }}
+                                {{ __('forgot_password') }}
                             </a>
                         </div>
                         @endif
                         <div class="grid mt-3 bg-transparent w-28 shrink-0 place-items-center md:w-36">
                             <x-admin.button
                                 class="w-full px-2 py-1 text-xl tracking-wider text-center text-white transition-colors duration-200 border border-white rounded-lg hover:border-pr-blue/40 hover:bg-pr-blue/5 justify-self-center font-extralight focus:border focus:rounded-lg focus:border-pr-blue/40 focus:text-pr-blue tfocus:outline-none focus:ring-0 hover:text-pr-blue/60 md:p-3 lg:text-2xl">
-                                {{ __('Увійти') }}
+                                {{ __('sign_in') }}
                             </x-admin.button>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
             <div class="py-5">
                 <div class="text-sm text-white">
                     {{ __('dont_have_account') }} <a class="ml-1 font-medium text-pr-blue/80 hover:text-pr-blue/60"
-                        href="{{ route('register') }}">{{ __('Зареєструватись') }}</a>
+                        href="{{ route('register') }}">{{ __('sign_up') }}</a>
                 </div>
             </div>
         </form>

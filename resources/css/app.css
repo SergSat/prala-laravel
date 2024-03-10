@@ -7,6 +7,22 @@
 
 @import 'tailwindcss/utilities';
 
+@layer base {
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+    /* Revert text color */
+    -webkit-text-fill-color: #0038FF !important;
+    color: #0038FF !important;
+    caret-color: #0038FF !important;
+
+    /* Revert background color */
+    transition: background-color 5000s ease-in-out 0s;
+    }
+
+}
+
 @layer utilities {
 
     .--pr-success {

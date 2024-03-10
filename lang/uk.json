@@ -1,3 +1,19 @@
 {
-  "dont_have_account": "У вас немає аккаунту?"
+  "entrance": "Вхід",
+  "login": "Логін",
+  "your_email": "Ваш Email",
+  "dont_have_account": "У вас немає аккаунту?",
+  "sign_up": "Зареєструватися",
+  "forgot_password": "Забули пароль?",
+  "sign_in": "Увійти",
+  "already_have_an_account": "Вже є аккаунт?",
+  "registration_page": "Сторінка реєстрації",
+  "confirm_your_password": "Підтвердіть ваш пароль",
+  "passwords_dont_match": "Паролі не співпадають",
+  "password": "Пароль",
+  "confirm_password": "Підтвердіть пароль",
+  "remember_me": "Запам'ятати мене",
+  "send_password_reset_link": "Надіслати посилання для відновлення пароля",
+  "whoops": "Упс",
+  "something_went_wrong": "Щось пішло не так"
 }
