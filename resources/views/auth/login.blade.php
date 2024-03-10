@@ -6,7 +6,7 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="mt-2 text-center text-white">
-                <h1 class="text-3xl tracking-widest font-extralight">{{ __('entrance') }}</h1>
+                <h1 class="text-3xl tracking-widest font-extralight">{{ __('login') }}</h1>
                 <h2 class="text-xl tracking-widest font-extralight">{{ __('') }}</h2>
                 @if (session('status'))
                 <div class="mb-4 text-sm font-medium text-green-600">

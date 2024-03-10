@@ -11,9 +11,9 @@
         <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">
             @if ($this->enabled)
             @if ($showingConfirmation)
-            {{ __('admin.finish_enabling_two_factor_authentication') }}
+            {{ __('admin.finish_enabling_two_factor_authentication').'.' }}
             @else
-            {{ __('admin.you_have_enabled_two_factor_authentication') }}
+            {{ __('admin.you_have_enabled_two_factor_authentication').'.' }}
             @endif
             @else
             {{ __('admin.you_have_not_enabled_two_factor_authentication') }}

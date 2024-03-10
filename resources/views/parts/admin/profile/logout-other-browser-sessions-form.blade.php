@@ -64,7 +64,7 @@
             </x-admin.button>
 
             <x-admin.action-message class="ms-3" on="loggedOut">
-                {{ __('admon.done') }}
+                {{ __('admin.done').'.' }}
             </x-admin.action-message>
         </div>
 

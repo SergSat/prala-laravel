@@ -32,7 +32,7 @@
 
     <x-slot name="actions">
         <x-admin.action-message class="me-3" on="saved">
-            {{ __('admin.saved') }}
+            {{ __('admin.saved') }}.
         </x-admin.action-message>
 
         <x-admin.button>
