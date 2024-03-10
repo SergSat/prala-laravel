@@ -52,7 +52,7 @@
 
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
-            <x-admin.label for="name" value="{{  __('admin.name') }}" />
+            <x-admin.label for="name" value="{!!  __('admin.name') !!}" />
             <x-admin.input id="name" type="text" class="block w-full mt-1" wire:model="state.name" required
                 autocomplete="name" />
             <x-admin.input-error for="name" class="mt-2" />
