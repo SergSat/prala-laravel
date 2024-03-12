@@ -10,17 +10,8 @@
 	<section class="flex flex-col mx-auto lg:mx-0">
 		<h3 class="pt-5 pl-5 text-xl text-pr-blue lg:text-2xl">Мої завдання</h3>
 
-		@include('parts.task-item-success')
+		<x-tasks :tasks="$tasks"/>
 
-		@include('parts.task-item')
-
-		@include('parts.task-item-success')
-
-		@include('parts.task-item')
-
-		@include('parts.task-item-success')
-
-		@include('parts.task-item')
 	</section>
 	<!-- Tasks -->
 

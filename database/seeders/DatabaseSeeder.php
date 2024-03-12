@@ -14,20 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
         $this->call([
+            // Admin seeders
             DashboardTableSeeder::class,
-            AnalyticsTableSeeder::class,
-            FintechTableSeeder::class,
-            CustomerSeeder::class,
-            OrderSeeder::class,
-            InvoiceSeeder::class,
-            MemberSeeder::class,
-            TransactionSeeder::class,
-            JobSeeder::class,
-            CampaignSeeder::class,
-            MarketerSeeder::class,
-            CampaignMarketerSeeder::class,
+            // App seeders
+            TaskSeeder::class
         ]);
     }
 }
