@@ -31,7 +31,7 @@
 				<h4 class="text-lg">Питання 1</h4>
 				<picture>
 					<img width="310" height="125" class="object-cover w-full mt-5 rounded-xl bg-pr-gray-soft"
-						src="{{ Vite::asset('resources/images/article_1.jpg') }}" alt="photo for question" />
+						src="{{ Vite::asset('resources/images/article-1.jpg') }}" alt="photo for question" />
 				</picture>
 
 				<ul class="flex flex-col gap-5">
