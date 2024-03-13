@@ -17,10 +17,10 @@
 </head>
 
 <body class="flex items-center justify-center min-h-screen font-light bg-fixed bg-center bg-no-repeat bg-cover"
-      style="background-image: url({{ Vite::asset('resources/images/enter_min.png') }})">
-<div class="w-full h-full">
-    {{ $slot }}
-</div>
+    style="background-image: url({{ asset('images/enter-min.png') }})">
+    <div class="w-full h-full">
+        {{ $slot }}
+    </div>
 </body>
 
 </html>

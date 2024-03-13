@@ -1,6 +1,6 @@
 <header class="">
 	<section class="relative py-5 lg:hidden">
-		<img class="mx-auto" src="{{ Vite::asset('resources/images/logo-prala.png') }}" alt="logo-prala" />
+		<img class="w-40 mx-auto h-14" src="{{ asset('images/logo-white.svg') }}" alt="logo-prala" />
 		<button id="hamburger-button"
 			class="absolute h-8 text-4xl transform -translate-y-1/2 cursor-pointer right-5 top-1/2 w-14 text-pr-blue">
 			<span

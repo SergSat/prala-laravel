@@ -1,6 +1,6 @@
 <x-authentication-layout>
     <div class="mx-auto flex h-dvh w-4/5 flex-col sm:max-w-[648px]">
-        <img width="350" height="153" src="{{ Vite::asset('resources/images/prala_logo1.svg') }}" alt="logo-prala"
+        <img width="350" height="153" src="{{ asset('images/logo-white.svg') }}" alt="logo-prala"
             class="mx-auto mt-10 w-26 h-11 sm:h-20 sm:w-40 md:h-28 md:w-80" />
         <hr class="mt-8 h-px bg-white max-[380px]:mt-6" />
         <form method="POST" action="{{ route('register') }}">
