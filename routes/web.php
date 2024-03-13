@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AdminPermissionController;
+use App\Http\Controllers\Admin\AdminRoleController;
+use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Jetstream\UserProfileController;
 use App\Http\Controllers\TaskController;
@@ -23,13 +26,16 @@ Route::fallback(function() {
     return view('utility/404');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
 
     // Admin routes
     Route::group(['prefix' => 'admin'], function () {
 
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
-        Route::get('/tasks', [TaskController::class, 'index'])->name('admin.tasks');
+        Route::get('/tasks', [TaskController::class, 'index'])->name('admin.tasks.index');
+        Route::get('/roles', [AdminRoleController::class, 'index'])->name('admin.roles.index');
+        Route::get('/permissions', [AdminPermissionController::class, 'index'])->name('admin.permissions.index');
+        Route::get('/users', [AdminUserController::class, 'index'])->name('admin.users.index');
 
     });
 

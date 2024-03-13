@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Task;
 
 use App\Models\Task;
 use App\Models\User;
@@ -64,7 +64,7 @@ class TasksManager extends Component
 
     public function render()
     {
-        return view('livewire.tasks-manager', [
+        return view('livewire.admin.roles.tasks-manager', [
             'tasks' => $this->tasks,
             'users' => User::all()
         ]);
