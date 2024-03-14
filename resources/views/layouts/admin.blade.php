@@ -46,12 +46,10 @@
         <!-- Page wrapper -->
         <div class="flex h-[100dvh] overflow-hidden">
 
-{{--            <x-admin.sidebar />--}}
             @include('parts.admin.sidebar')
             <!-- Content area -->
             <div class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden @if($attributes['background']){{ $attributes['background'] }}@endif" x-ref="contentarea">
 
-{{--                <x-admin.header />--}}
                 @include('parts.admin.header')
                 <main class="grow">
                     <!-- Page Heading -->
@@ -69,7 +67,7 @@
             </div>
 
         </div>
-
+        @livewire('confirmation-modal')
         @livewireScripts
     </body>
 </html>
