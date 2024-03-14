@@ -12,7 +12,7 @@ class ConfirmationModal extends Component
     public $modelName;
 
     #[On('confirm-delete')]
-    public function confirmDeleting($modelName, $modelId)
+    public function show($modelName, $modelId)
     {
         $this->modelName = $modelName;
         $this->modelId = $modelId;
@@ -21,19 +21,11 @@ class ConfirmationModal extends Component
 
     public function delete()
     {
-        // Выполните удаление объекта здесь, используя $this->modelName и $this->modelId
         $this->modelName::find($this->modelId)->delete();
 
-        // Сбросить состояние модального окна после удаления
         $this->reset(['show', 'modelId', 'modelName']);
 
-        $this->dispatch('update-list', modelId: $this->modelId);
-    }
-
-    public function modelDeleted($modelId)
-    {
-        // Логика, которая должна выполниться после удаления пользователя
-        // Например, можно закрыть модальное окно или выполнить другие действия
+        $this->dispatch('update-component');
     }
 
     public function render()
