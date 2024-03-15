@@ -4,6 +4,7 @@ namespace App\Livewire\Task;
 
 use App\Models\Task;
 use App\Models\User;
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 
 class TasksManager extends Component
@@ -62,9 +63,10 @@ class TasksManager extends Component
         $this->taskBeingEdited = null;
     }
 
+    #[Layout('layouts.admin')]
     public function render()
     {
-        return view('livewire.admin.roles.tasks-manager', [
+        return view('livewire.admin.tasks.tasks-manager', [
             'tasks' => $this->tasks,
             'users' => User::all()
         ]);

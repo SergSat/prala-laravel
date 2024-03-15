@@ -32,10 +32,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::group(['prefix' => 'admin'], function () {
 
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
-        Route::get('/tasks', [TaskController::class, 'index'])->name('admin.tasks.index');
+//        Route::get('/tasks', [TaskController::class, 'index'])->name('admin.tasks.index');
+        Route::get('/tasks', \App\Livewire\Task\TasksManager::class)->name('admin.tasks.index');
         Route::get('/roles', [AdminRoleController::class, 'index'])->name('admin.roles.index');
         Route::get('/permissions', [AdminPermissionController::class, 'index'])->name('admin.permissions.index');
-        Route::get('/users', [AdminUserController::class, 'index'])->name('admin.users.index');
+//        Route::get('/users', [AdminUserController::class, 'index'])->name('admin.users.index');
+        Route::get('/users', \App\Livewire\User\UsersManager::class)->name('admin.users.index');
 
     });
 
