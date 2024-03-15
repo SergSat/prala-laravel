@@ -2,7 +2,13 @@
 
 return [
     "profile_information" => "Інформація про профіль",
+    "actions" => "Дії",
     "administrator" => "Адміністратор",
+    "add_user" => "Додати користувача",
+    "delete" => "Видалити",
+    "edit" => "Редагувати",
+    "search" => "Пошук",
+    "role" => "Роль",
     "settings" => "Налаштування",
     "sign_out" => "Вихід",
     "profile" => "Профіль",
@@ -23,6 +29,7 @@ return [
     "done" => "Готово",
     "disable" => "Вимкнути",
     "unknown" => "Невідомо",
+    "user_name" => "Ім'я користувача",
     "this_device" => "Цей пристрій",
     "last_active" => "Остання активність",
     "delete_account" => "Видалити обліковий запис",
