@@ -9,6 +9,8 @@
             @endforeach
         </select>
         <button wire:click="addTask">Add Task</button>
+        <a wire:navigate href="{{ route('admin.users.index') }}"  class="px-4 py-2 bg-green-500 text-white rounded-lg">Users</a>
+
     </div>
 
     <hr>

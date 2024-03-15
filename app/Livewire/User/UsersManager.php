@@ -4,6 +4,7 @@ namespace App\Livewire\User;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Spatie\Permission\Models\Permission;
@@ -45,6 +46,7 @@ class UsersManager extends Component
         $this->dispatch('confirm-delete', modelName: 'App\Models\User', modelId: $userId);
     }
 
+    #[Layout('layouts.admin')]
     public function render()
     {
         return view('livewire.admin.users.users-manager');
