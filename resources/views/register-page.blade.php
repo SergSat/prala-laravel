@@ -17,10 +17,10 @@
 </head>
 
 <body class="flex items-center justify-center min-h-screen font-light bg-fixed bg-center bg-no-repeat bg-cover"
-	style="background-image: url({{ Vite::asset('resources/images/enter_min.png') }})">
+	style="background-image: url({{ asset('images/enter_min.png') }})">
 	<div class="w-full h-full">
 		<div class="mx-auto flex h-dvh w-4/5 flex-col sm:max-w-[648px]">
-			<img width="350" height="153" src="{{ Vite::asset('resources/images/prala_logo1.svg') }}" alt="logo-prala"
+			<img width="350" height="153" src="{{ asset('images/prala_logo1.svg') }}" alt="logo-prala"
 				class="mx-auto mt-16 w-26 h-11 sm:h-20 sm:w-40 md:h-28 md:w-80" />
 			<hr class="mt-14 h-px border-0 bg-white max-[380px]:mt-6" />
 			<form action="">

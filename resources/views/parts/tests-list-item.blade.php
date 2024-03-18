@@ -1,7 +1,7 @@
 <li class="relative flex flex-col gap-3 text-sm group sm:text-base">
     <a href="{{ route('test') }}"
         class="relative block w-full rounded-lg h-28 bg-pr-gray-soft group-hover:ring-2 group-hover:ring-sky-400 group-focus:outline-none group-focus:ring group-focus:ring-indigo-300">
-        <img src="{{ Vite::asset('resources/images/tests-small.jpg') }}" alt="test with pencil"
+        <img src="{{ asset('images/tests-small.jpg') }}" alt="test with pencil"
             class="object-cover w-full h-full rounded-lg opacity-50" />
         <div class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
             <svg width="19" height="20" viewBox="0 0 19 20" fill="none" class="w-12 h-12 opacity-70"

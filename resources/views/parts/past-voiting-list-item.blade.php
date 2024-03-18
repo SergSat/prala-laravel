@@ -1,7 +1,7 @@
 <div class="flex w-full rounded-lg">
     <div class="flex flex-col gap-2.5 @xs:flex-row @2xs:gap-5">
         <picture class="flex items-center bg-white">
-            <img width="100" height="100" src="{{ Vite::asset('resources/images/vote@2x.webp') }}" alt="voting"
+            <img width="100" height="100" src="{{ asset('images/vote@2x.webp') }}" alt="voting"
                 class="w-full max-w-[100px] object-cover border border-pr-gray-sky/40 rounded-lg">
         </picture>
         <div class="flex flex-col gap-2.5 @xs:gap-5">

@@ -32,7 +32,7 @@
 					<h4>Назва</h4>
 					<picture>
 						<img width="310" height="125" class="object-cover w-full mt-5 rounded-xl bg-pr-gray-soft"
-							src="{{ Vite::asset('resources/images/article-3.jpg') }}" alt="photo for question" />
+							src="{{ asset('images/article-3.jpg') }}" alt="photo for question" />
 					</picture>
 
 					<p>

@@ -3,7 +3,7 @@
 	<img width="200" height="50" src="{{ asset('images/logo-white.svg') }}" alt="logo-prala" class="h-16 w-50" />
 
 	<section class="flex flex-col items-center w-3/4 py-10 border rounded-lg border-pr-gray-sky">
-		<img width="100" height="100" src="{{ Vite::asset('public/images/photo-model.png') }}" alt="avatar"
+		<img width="100" height="100" src="{{ asset('images/photo-model.png') }}" alt="avatar"
 			class="w-24 h-24" />
 		<div class="flex flex-col items-center">
 			<h3 class="pt-6 text-2xl">Анастасія</h3>

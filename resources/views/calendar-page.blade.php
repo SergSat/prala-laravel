@@ -4,16 +4,16 @@
 <section class="mx-auto w-full max-w-[300px] max-h-screen min-h-svh flex flex-col items-center gap-8 py-10 bg-pr-beige">
 
     <section class="flex flex-col items-center w-3/4 py-6 mt-6 border rounded-lg border-pr-gray-sky">
-        <img width="77" height="77" src="{{ Vite::asset('resources/images/photo-model.png') }}" alt="avatar"
+        <img width="77" height="77" src="{{ asset('images/photo-model.png') }}" alt="avatar"
             class="w-16 h-16" />
         <div class="flex flex-col items-center">
             <h3 class="pt-6 text-2xl">Анастасія</h3>
             <p class="mt-1 font-extralight text-stone-500">Кулінарний геній</p>
             <div class="flex items-center justify-between w-3/4 mt-3">
-                <img class="w-5 h-5" src="{{ Vite::asset('resources/images/starfull.svg') }}" alt="star" />
-                <img class="w-5 h-5" src="{{ Vite::asset('resources/images/starempty.svg') }}" alt="star" />
-                <img class="w-5 h-5" src="{{ Vite::asset('resources/images/starempty.svg') }}" alt="star" />
-                <img class="w-5 h-5" src="{{ Vite::asset('resources/images/starempty.svg') }}" alt="star" />
+                <img class="w-5 h-5" src="{{ asset('images/starfull.svg') }}" alt="star" />
+                <img class="w-5 h-5" src="{{ asset('images/starempty.svg') }}" alt="star" />
+                <img class="w-5 h-5" src="{{ asset('images/starempty.svg') }}" alt="star" />
+                <img class="w-5 h-5" src="{{ asset('images/starempty.svg') }}" alt="star" />
             </div>
         </div>
     </section>

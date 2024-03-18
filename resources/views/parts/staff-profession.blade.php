@@ -2,7 +2,7 @@
     class="min-w-[210px] max-w-72 flex flex-col items-center w-full gap-3 p-5 bg-white border rounded-lg sm:gap-5 border-pr-gray-sky">
     <a href="{{ route('staff-employee') }}" class="flex flex-col items-center gap-3">
         <picture>
-            <img src="{{ Vite::asset('resources/images/photo-model.png') }}" alt="avatar"
+            <img src="{{ asset('images/photo-model.png') }}" alt="avatar"
                 class="w-24 h-24 rounded-full">
         </picture>
         <div class="text-center">

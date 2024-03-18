@@ -29,7 +29,7 @@
         <div
             class="flex flex-col max-w-screen-md gap-5 p-5 bg-white mt-7 lg:p-8 lg:pt-0 lg:mt-5 rounded-xl drop-shadow-lg">
             <picture>
-                <img width="504px" height="204px" src="{{ Vite::asset('resources/images/article-1.jpg') }}"
+                <img width="504px" height="204px" src="{{ asset('images/article-1.jpg') }}"
                     alt="photo for voting" class="object-cover w-full mt-5 rounded-xl bg-pr-gray-soft">
             </picture>
             <ul class="flex flex-col gap-5">

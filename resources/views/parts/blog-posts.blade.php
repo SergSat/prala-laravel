@@ -1,7 +1,7 @@
 <div class="w-full p-5 mx-auto bg-white sm:p-8 rounded-xl lg:w-auto">
     <article class="prose">
         <div>
-            <img width="504" height="202" src="{{ Vite::asset('resources/images/blog.jpg') }}" alt="laptop with cofee"
+            <img width="504" height="202" src="{{ asset('images/blog.jpg') }}" alt="laptop with cofee"
                 class="w-full mt-0 rounded-xl">
         </div>
 
