@@ -17,7 +17,7 @@ class TaskFactory extends Factory
      */
     public function definition(): array
     {
-        $user = User::where('email', 'djigorsan@gmail.com')->firstOrFail();
+        $user = User::role('employee')->inRandomOrder()->firstOrFail();
 
         return [
             'name' => fake()->name(),

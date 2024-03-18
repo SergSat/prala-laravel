@@ -12,19 +12,49 @@ class RolePermissionSeeder extends Seeder
     public function run()
     {
         // Create permissions
-        $permissions = ['edit task', 'delete task', 'create task', 'view task'];
-        foreach ($permissions as $permission) {
+        $all_permissions = [
+            // Role
+            'edit role', 'delete role', 'create role', 'view role',
+            // Permission
+            'edit permission', 'delete permission', 'create permission', 'view permission',
+            // Task
+            'edit task', 'delete task', 'create task', 'view task',
+            // User
+            'edit user', 'delete user', 'create user', 'view user',
+        ];
+        foreach ($all_permissions as $permission) {
             Permission::create(['name' => $permission]);
         }
 
+        $manager_permissions = [
+            // Task
+            'edit task', 'delete task', 'create task', 'view task',
+            // User
+            'edit user', 'create user', 'view user',
+        ];
+
+        $hr_permissions = [
+            // Task
+            'edit task', 'delete task', 'create task', 'view task',
+            // User
+            'edit user', 'create user', 'view user',
+        ];
+
+        $employee_permissions = [
+            // Task
+            'view task',
+        ];
         // Create roles and assign created permissions
         $adminRole = Role::create(['name' => 'admin']);
-        $adminRole->givePermissionTo($permissions);
+        $adminRole->givePermissionTo($all_permissions);
 
-        $editorRole = Role::create(['name' => 'editor']);
-        $editorRole->givePermissionTo(['edit task', 'create task', 'view task']);
+        $editorRole = Role::create(['name' => 'manager']);
+        $editorRole->givePermissionTo($manager_permissions);
 
-        $viewerRole = Role::create(['name' => 'viewer']);
-        $viewerRole->givePermissionTo(['view task']);
+        $viewerRole = Role::create(['name' => 'hr']);
+        $viewerRole->givePermissionTo($hr_permissions);
+
+        $viewerRole = Role::create(['name' => 'employee']);
+        $viewerRole->givePermissionTo($employee_permissions);
     }
 }
