@@ -23,4 +23,14 @@ class Task extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function getAssignedToAttribute()
+    {
+        return $this->user->name;
+    }
+
+    public function getStatusAttribute()
+    {
+        return $this->completed ? __('completed') : __('pending');
+    }
 }

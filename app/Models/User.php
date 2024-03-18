@@ -59,4 +59,14 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+     * Get the user's roles in string format
+     *
+     * @return string
+     */
+    public function getRolesLabelAttribute()
+    {
+        return $this->roles->pluck('name')->join(', ');
+    }
 }

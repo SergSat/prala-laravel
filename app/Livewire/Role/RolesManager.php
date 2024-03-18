@@ -3,68 +3,29 @@
 namespace App\Livewire\Role;
 
 
+use App\Livewire\Traits\HandlesCRUD;
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role;
+use App\Models\Role;
 
 class RolesManager extends Component
 {
-    public $roles, $permissions, $roleName, $selectedPermissions = [], $editingRoleId = null;
+    use HandlesCRUD;
 
     public function mount()
     {
-        $this->roles = Role::all();
-        $this->permissions = Permission::all();
+        $this->modelClass = Role::class;
+        $this->columns = ['name', 'permissions_label'];
+        $this->modelAddUpdateClass = RoleAddUpdateModal::class;
+        $this->dispatchEventBaseName = 'role';
+        $this->loadResources();
     }
 
-    public function createRole()
-    {
-        $role = Role::create(['name' => $this->roleName]);
-
-        $permissions = Permission::whereIn('id', $this->selectedPermissions)->get();
-
-        $role->givePermissionTo($permissions); // Назначение разрешений роли
-
-        $this->resetInput();
-    }
-
-    public function editRole($roleId)
-    {
-        $role = Role::findById($roleId);
-        $this->roleName = $role->name;
-        $this->selectedPermissions = $role->permissions->pluck('id')->toArray();
-        $this->editingRoleId = $roleId;
-    }
-
-    public function updateRole()
-    {
-        $role = Role::findById($this->editingRoleId);
-        $role->name = $this->roleName;
-        $role->save();
-
-        $permissions = Permission::whereIn('id', $this->selectedPermissions)->get();
-        $role->syncPermissions($permissions);
-
-        $this->resetInput();
-        $this->mount();
-    }
-
-    public function deleteRole($roleId)
-    {
-        Role::findById($roleId)->delete();
-        $this->mount();
-    }
-
-    private function resetInput()
-    {
-        $this->roleName = '';
-        $this->selectedPermissions = [];
-        $this->editingRoleId = null;
-        $this->mount();
-    }
-
+    #[Layout('layouts.admin')]
     public function render()
     {
         return view('livewire.admin.roles.roles-manager');
     }
+
 }

@@ -1,23 +1,13 @@
-<div>
-    <input type="text" wire:model="roleName" placeholder="Role Name">
-    <select wire:model="selectedPermissions" multiple>
-        @foreach ($permissions as $permission)
-            <option value="{{ $permission->id }}">{{ $permission->name }}</option>
-        @endforeach
-    </select>
+<div class="w-full py-6">
 
-    @if ($editingRoleId)
-        <button wire:click="updateRole">Update Role</button>
-    @else
-        <button wire:click="createRole">Add Role</button>
-    @endif
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('admin.roles') }}
+        </h2>
+    </x-slot>
 
-    <ul>
-        @foreach ($roles as $role)
-            <li>{{ $role->name }}
-                <button wire:click="editRole({{ $role->id }})">Edit</button>
-                <button wire:click="deleteRole({{ $role->id }})">Delete</button>
-            </li>
-        @endforeach
-    </ul>
+    <livewire:admin-table key="{{ now() }}" :items="$items" :columns="$columns" />
+
+    <livewire:role.role-add-update-modal />
+
 </div>

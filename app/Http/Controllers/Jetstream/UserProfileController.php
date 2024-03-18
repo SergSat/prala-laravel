@@ -15,7 +15,7 @@ class UserProfileController extends UserProfileControllerJetstream
      */
     public function show(Request $request)
     {
-        return view('pages.admin.profile.show', [
+        return view('admin.profile.show', [
             'request' => $request,
             'user' => $request->user(),
         ]);

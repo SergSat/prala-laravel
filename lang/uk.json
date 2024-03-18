@@ -15,5 +15,9 @@
   "remember_me": "Запам'ятати мене",
   "send_password_reset_link": "Надіслати посилання для відновлення пароля",
   "whoops": "Упс",
-  "something_went_wrong": "Щось пішло не так"
+  "something_went_wrong": "Щось пішло не так",
+  "status": "Статус",
+  "completed": "Завершено",
+  "pending": "В очікуванні",
+  "tasks": "Завдання"
 }

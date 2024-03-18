@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Task;
 
+use App\Livewire\Traits\HandlesCRUD;
 use App\Models\Task;
 use App\Models\User;
 use Livewire\Attributes\Layout;
@@ -9,66 +10,32 @@ use Livewire\Component;
 
 class TasksManager extends Component
 {
-    public $tasks, $name, $completed, $userId, $taskBeingEdited;
+    use HandlesCRUD;
 
     public function mount()
     {
-        $this->tasks = Task::all();
-    }
-
-    public function editTask(Task $task)
-    {
-        $this->taskBeingEdited = $task->id;
-        $this->name = $task->name;
-        $this->completed = $task->completed;
-        $this->userId = $task->user_id;
-    }
-
-    public function saveTask()
-    {
-        $task = Task::find($this->taskBeingEdited);
-        $task->update([
-            'name' => $this->name,
-            'completed' => $this->completed,
-            'user_id' => $this->userId,
-        ]);
-
-        $this->resetInput();
-        $this->tasks = Task::all(); // Refresh the tasks list
-    }
-
-    public function deleteTask(Task $task)
-    {
-        $task->delete();
-        $this->tasks = Task::all(); // Refresh the tasks list
-    }
-
-    public function addTask()
-    {
-        Task::create([
-            'name' => $this->name,
-            'completed' => $this->completed,
-            'user_id' => $this->userId,
-        ]);
-
-        $this->resetInput();
-        $this->tasks = Task::all(); // Refresh the tasks list
-    }
-
-    private function resetInput()
-    {
-        $this->name = null;
-        $this->completed = false;
-        $this->userId = null;
-        $this->taskBeingEdited = null;
+        $this->modelClass = Task::class;
+        $this->columns = ['name', 'status', 'assigned_to', 'created_at'];
+        $this->modelAddUpdateClass = TaskAddUpdateModal::class;
+        $this->dispatchEventBaseName = 'task';
+        $this->wrappers = [
+            'status' => [
+                __('completed') => [
+                    'before' => '<span class="inline-flex px-3 items-center w-auto justify-center rounded-lg bg-green-500 text-black">',
+                    'after' => '</span>',
+                ],
+                __('pending') => [
+                    'before' => '<span class="inline-flex px-3 items-center w-auto justify-center rounded-lg bg-orange-500 text-white">',
+                    'after' => '</span>',
+                ]
+            ]
+        ];
+        $this->loadResources();
     }
 
     #[Layout('layouts.admin')]
     public function render()
     {
-        return view('livewire.admin.tasks.tasks-manager', [
-            'tasks' => $this->tasks,
-            'users' => User::all()
-        ]);
+        return view('livewire.admin.tasks.tasks-manager');
     }
 }

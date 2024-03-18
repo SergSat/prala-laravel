@@ -45,6 +45,18 @@ class UserFactory extends Factory
         });
     }
 
+
+    /**
+     * Configure the factory.
+     */
+    public function configure(): static
+    {
+        return $this->afterCreating(function (User $user) {
+            $role = $this->faker->randomElement(['admin', 'editor', 'viewer']);
+            $user->assignRole($role);
+        });
+    }
+
     /**
      * Indicate that the user should have a personal team.
      */

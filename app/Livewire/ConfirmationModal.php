@@ -9,19 +9,20 @@ class ConfirmationModal extends Component
 {
     public $show = false;
     public $modelId;
-    public $modelName;
+    public $model;
 
     #[On('confirm-delete')]
-    public function show($modelName, $modelId)
+    public function show($model, $modelId)
     {
-        $this->modelName = $modelName;
+        dd($model);
+        $this->model = $model;
         $this->modelId = $modelId;
         $this->show = true;
     }
 
     public function delete()
     {
-        $this->modelName::find($this->modelId)->delete();
+        $this->model->delete();
 
         $this->reset(['show', 'modelId', 'modelName']);
 

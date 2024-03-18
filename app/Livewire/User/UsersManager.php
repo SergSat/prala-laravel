@@ -2,48 +2,23 @@
 
 namespace App\Livewire\User;
 
+use App\Livewire\Traits\HandlesCRUD;
 use App\Models\User;
-use Illuminate\Support\Facades\Hash;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\On;
 use Livewire\Component;
-use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role;
 
 class UsersManager extends Component
 {
-    public $users, $roles, $permissions;
+    use HandlesCRUD;
 
     public function mount()
     {
+        $this->modelClass = User::class;
+        $this->columns = ['name', 'email', 'roles_label'];
+        $this->modelAddUpdateClass = UserAddUpdateModal::class;
+        $this->dispatchEventBaseName = 'user';
         $this->loadResources();
-    }
-
-    public function loadResources()
-    {
-        $this->users = User::with('roles', 'permissions')->get();
-        $this->roles = Role::all();
-    }
-
-    #[On('update-component')]
-    public function updateUserList()
-    {
-        $this->loadResources();
-    }
-
-    public function create()
-    {
-        $this->dispatch('create-user');
-    }
-
-    public function edit($userId)
-    {
-        $this->dispatch('edit-user', $userId);
-    }
-
-    public function delete($userId)
-    {
-        $this->dispatch('confirm-delete', modelName: 'App\Models\User', modelId: $userId);
     }
 
     #[Layout('layouts.admin')]

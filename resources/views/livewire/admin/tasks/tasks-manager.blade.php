@@ -1,40 +1,13 @@
-<div>
-    <div>
-        <input type="text" wire:model="name" placeholder="Task Name">
-        <input type="checkbox" wire:model="completed"> Completed
-        <select wire:model="userId">
-            <option value="">Assign to User</option>
-            @foreach ($users as $user)
-                <option value="{{ $user->id }}">{{ $user->name }}</option>
-            @endforeach
-        </select>
-        <button wire:click="addTask">Add Task</button>
-        <a wire:navigate href="{{ route('admin.users.index') }}"  class="px-4 py-2 bg-green-500 text-white rounded-lg">Users</a>
+<div class="w-full py-6">
 
-    </div>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('admin.tasks') }}
+        </h2>
+    </x-slot>
 
-    <hr>
+    <livewire:admin-table key="{{ now() }}" :items="$items" :columns="$columns" :wrappers="$wrappers" />
 
-    <div>
-        @foreach ($tasks as $task)
-            <div>
-                {{ $task->name }} - {{ $task->completed ? 'Completed' : 'Pending' }} - {{ $task->user->name }}
-                <button wire:click="editTask({{ $task->id }})">Edit</button>
-                <button wire:click="deleteTask({{ $task->id }})">Delete</button>
-            </div>
-        @endforeach
-    </div>
+    <livewire:task.task-add-update-modal />
 
-    @if ($taskBeingEdited)
-        <div>
-            <input type="text" wire:model="name">
-            <input type="checkbox" wire:model="completed">
-            <select wire:model="userId">
-                @foreach($users as $user)
-                    <option value="{{ $user->id }}">{{ $user->name }}</option>
-                @endforeach
-            </select>
-            <button wire:click="saveTask">Save</button>
-        </div>
-    @endif
 </div>

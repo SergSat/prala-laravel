@@ -6,30 +6,34 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Attributes\On;
 use Livewire\Component;
-use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 class UserAddUpdateModal extends Component
 {
-    public $showModal = false;
+    public $show = false;
     public $userId;
     public $userName;
     public $userEmail;
     public $password;
     public $selectedRoles = [];
-    public $selectedPermissions = [];
+    public $roles;
 
-    #[On('create-user')]
+    public function mount()
+    {
+        $this->roles = Role::all();
+    }
+
+    #[On('user-create')]
     public function showCreate()
     {
         $this->resetInput();
-        $this->showModal = true;
+        $this->show = true;
     }
 
-    #[On('edit-user')]
-    public function showEdit($userId)
+    #[On('user-edit')]
+    public function showEdit($id)
     {
-        $user = User::with('roles')->find($userId);
+        $user = User::with('roles')->find($id);
         if (!$user)
             return;
 
@@ -37,7 +41,7 @@ class UserAddUpdateModal extends Component
         $this->userName = $user->name;
         $this->userEmail = $user->email;
         $this->selectedRoles = $user->roles->pluck('id')->toArray();
-        $this->showModal = true;
+        $this->show = true;
     }
 
     public function saveUser()
@@ -61,7 +65,7 @@ class UserAddUpdateModal extends Component
 
         // Close modal and reset input fields
         $this->resetInput();
-        $this->showModal = false;
+        $this->show = false;
 
         $this->dispatch('update-component');
 
@@ -91,7 +95,7 @@ class UserAddUpdateModal extends Component
 
         // Close modal and reset input fields
         $this->resetInput();
-        $this->showModal = false;
+        $this->show = false;
 
         $this->dispatch('update-component');
     }
@@ -103,14 +107,10 @@ class UserAddUpdateModal extends Component
         $this->userEmail = '';
         $this->password = '';
         $this->selectedRoles = [];
-        $this->selectedPermissions = [];
     }
 
     public function render()
     {
-        return view('livewire.admin.users.user-add-update-modal', [
-            'roles' => Role::all(),
-            'permissions' => Permission::all(),
-        ]);
+        return view('livewire.admin.users.user-add-update-modal');
     }
 }
