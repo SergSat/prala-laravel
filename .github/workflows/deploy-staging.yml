@@ -23,4 +23,4 @@ jobs:
 
       - name: Deploy to server and restart docker
         run: |
-          ssh -o StrictHostKeyChecking=no root@${{env.SERVER_IP}} "cd /var/www/prala && git checkout dev && git pull origin dev && docker-compose exec -T app composer install --no-dev --optimize-autoloader && docker-compose -f docker-compose.yaml down && docker-compose -f docker-compose.yaml up -d && npm install && npm run build"
+          ssh -o StrictHostKeyChecking=no root@${{env.SERVER_IP}} "cd /var/www/prala && git checkout dev && git pull origin dev && docker-compose exec -T app composer install --optimize-autoloader && docker-compose -f docker-compose.yaml down && docker-compose -f docker-compose.yaml up -d && npm install && npm run build"
