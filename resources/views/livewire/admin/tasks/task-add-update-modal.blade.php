@@ -1,6 +1,6 @@
 <x-admin.dialog-modal wire:model.live="show">
     <x-slot name="title">
-        {{ __('admin.' . ($userId ? 'edit_task' : 'add_task') ) }}
+        {{ __('admin.' . ($id ? 'edit_task' : 'add_task') ) }}
     </x-slot>
 
     <x-slot name="content">
@@ -31,7 +31,7 @@
     <x-slot name="footer">
         <x-admin.button :color="'danger'" wire:click="$toggle('show')" wire:loading.attr="disabled" class="mr-2">{{ __('admin.cancel') }}</x-admin.button>
 
-        @if ($userId)
+        @if ($id)
             <x-admin.button :color="'info'" type="submit" wire:click="updateTask({{$id}})">{{ __('admin.save') }}</x-admin.button>
         @else
             <x-admin.button :color="'info'" type="submit" wire:click="saveTask">{{ __('admin.save') }}</x-admin.button>

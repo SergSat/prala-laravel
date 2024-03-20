@@ -30,9 +30,18 @@ trait HandlesCRUD
 
     public function delete($id)
     {
-        if ($model = $this->modelClass::findOrFail($id)) {
-            $model->delete();
+        if ($model = $this->modelClass::find($id)) {
+            $deleted = $model->delete();
             $this->loadResources();
+
+            if ($deleted) {
+                $status = 'success';
+                $message = __('alert.element_successfully_deleted');
+            } else {
+                $status = 'danger';
+                $message = __('alert.element_not_successfully_deleted');
+            }
+            $this->dispatch('notify', status: $status, message: $message);
         }
     }
 

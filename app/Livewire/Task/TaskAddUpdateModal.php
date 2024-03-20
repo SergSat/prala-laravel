@@ -14,7 +14,6 @@ class TaskAddUpdateModal extends Component
 {
     public $show = false;
     public $users = null;
-    public $selectedUsers = null;
     public $id;
     public $name;
     public $userId;
@@ -41,7 +40,7 @@ class TaskAddUpdateModal extends Component
 
         $this->id = $task->id;
         $this->name = $task->name;
-        $this->userId = [$task->user->id];
+        $this->userId = $task->user->id;
         $this->show = true;
     }
 
@@ -51,6 +50,7 @@ class TaskAddUpdateModal extends Component
             'name' => 'required|string|max:255',
             'userId' => 'required|min:1',
         ]);
+
 
         // Save task
         Task::create([
@@ -79,7 +79,7 @@ class TaskAddUpdateModal extends Component
         ]);
 
         // Save task
-        $task->update([
+        $updated = $task->update([
             'name' => $this->name,
             'user_id' => $this->userId,
         ]);
@@ -89,6 +89,17 @@ class TaskAddUpdateModal extends Component
         $this->show = false;
 
         $this->dispatch('update-component');
+
+        // Notify
+        if ($updated) {
+            $status = 'success';
+            $message = __('alert.element_successfully_updated');
+        } else {
+            $status = 'danger';
+            $message = __('alert.element_not_successfully_updated');
+        }
+
+        $this->dispatch('notify', status: $status, message: $message);
     }
 
     private function resetInput()

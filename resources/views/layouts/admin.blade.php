@@ -52,6 +52,16 @@
             x-ref="contentarea">
 
             @include('parts.admin.header')
+
+            <livewire:notifications />
+{{--            @if (session('notifications'))--}}
+{{--                @foreach (session('notifications') as $notification)--}}
+{{--                    <livewire:alert :type="$notification['type']">--}}
+{{--                        {{$notification['message']}}--}}
+{{--                    </livewire:alert>--}}
+{{--                @endforeach--}}
+{{--            @endif--}}
+
             <main class="grow">
                 <!-- Page Heading -->
                 @if (isset($header))
