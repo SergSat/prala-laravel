@@ -1,4 +1,4 @@
-@props(['color'])
+@props(['color', 'disabled' => false])
 
 @php
     $color = [
@@ -10,6 +10,6 @@
         'info' => 'bg-blue-500 text-white border-transparent focus:ring-blue-500/50 focus:border-blue-500 hover:bg-blue-600',
     ][$color ?? 'none'];
 @endphp
-<button {{ $attributes->merge(['type' => 'submit', 'class' => 'flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg focus:ring-4 ' . $color]) }}>
+<button {{ $disabled ? 'disabled' : '' }} {{ $attributes->merge(['type' => 'submit', 'class' => 'flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg focus:ring-4 ' . $color]) }}>
     {{ $slot }}
 </button>

@@ -61,6 +61,15 @@ class User extends Authenticatable
     ];
 
     /**
+     * The professions that belong to the user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function professions()
+    {
+        return $this->belongsToMany(Profession::class);
+    }
+    /**
      * Get the user's roles in string format
      *
      * @return string
@@ -68,5 +77,15 @@ class User extends Authenticatable
     public function getRolesLabelAttribute()
     {
         return $this->roles->pluck('name')->join(', ');
+    }
+
+    /**
+     * Get the user's professions in string format
+     *
+     * @return string
+     */
+    public function getProfessionsLabelAttribute()
+    {
+        return $this->professions->pluck('name')->join(', ');
     }
 }

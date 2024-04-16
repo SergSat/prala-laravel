@@ -68,8 +68,8 @@
     line-height: var(--daySize);
 }
 
-.flatpickr-day, 
-.flatpickr-day.prevMonthDay, 
+.flatpickr-day,
+.flatpickr-day.prevMonthDay,
 .flatpickr-day.nextMonthDay,
 .flatpickr-day.selected.startRange,
 .flatpickr-day.startRange.startRange,
@@ -156,7 +156,7 @@
 .flatpickr-months .flatpickr-next-month {
     position: static;
     height: auto;
-    @apply text-pr-blue hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-300 border-transparent;    
+    @apply text-pr-blue hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-300 border-transparent;
 }
 
 .flatpickr-months .flatpickr-prev-month svg,

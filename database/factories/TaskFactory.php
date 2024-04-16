@@ -17,10 +17,10 @@ class TaskFactory extends Factory
      */
     public function definition(): array
     {
-        $user = User::role('employee')->inRandomOrder()->firstOrFail();
+        $user = User::inRandomOrder()->firstOrFail();
 
         return [
-            'name' => fake()->name(),
+            'name' => fake()->catchPhrase(),
             'completed' => false,
             'user_id' => $user->id,
         ];

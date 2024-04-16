@@ -1,0 +1,2 @@
+<div class="inline-flex px-3 items-center w-auto justify-center rounded-lg bg-green-500 text-black">"completed"</div>
+<div class="inline-flex px-3 items-center w-auto justify-center rounded-lg bg-orange-500 text-white">"pending"</div>

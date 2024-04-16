@@ -7,23 +7,35 @@
 
         <!-- Name -->
         <div class="mb-4">
-            <x-admin.label for="userName" value="{!! __('admin.name') !!}" />
-            <x-admin.input-text wire:model.defer="name" type="text" class="w-full" placeholder="{{ __('admin.name') }}" />
+            <x-admin.label for="name" value="{!! __('admin.name') !!}" />
+            <x-admin.input-text wire:model="name" type="text" class="w-full" placeholder="{{ __('admin.name') }}" />
             <x-admin.input-error for="name" />
         </div>
 
         <!-- User -->
         <div class="mb-4">
             <x-admin.label for="userId" value="{!! __('admin.users') !!}" />
-            <div class="flex flex-wrap">
-                @foreach ($users as $user)
-                    <label class="flex items-center mr-2">
-                        <x-admin.input type="radio" value="{{ $user->id }}" wire:model.defer="userId" class="form-checkbox" />
-                        <span class="ml-2 text-sm text-gray-600">{{ $user->name }}</span>
-                    </label>
-                @endforeach
+            <div>
+                <x-admin.input-text type="text" class="w-full" placeholder="{{__('admin.search')}}" wire:model.live="search" />
+                <input type="hidden" wire:model="userId" />
+                <div class="mt-1 relative">
+                    <div class="absolute z-10 w-full bg-white {{ count($selectedUsers) > 0 ? 'border border-gray-200' : '' }} rounded-md overflow-auto" style="max-height: 90px;">
+                        @foreach($selectedUsers as $user)
+                            <div wire:click="selectUser('{{ $user->id }}', '{{ $user->name }} - ({{ $user->email }})')" class="p-2 text-sm text-gray-700 border-b border-gray-100 hover:bg-gray-200 cursor-pointer">
+                                {{ $user->name }} - ({{ $user->email }})
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
             </div>
             <x-admin.input-error for="userId" />
+        </div>
+
+        <!-- Status -->
+        <div class="mb-4">
+            <x-admin.label for="completed" value="{!! __('admin.completed') !!}" />
+            <x-admin.toggle wire:model="completed" />
+            <x-admin.input-error for="completed" />
         </div>
 
     </x-slot>
@@ -34,7 +46,7 @@
         @if ($id)
             <x-admin.button :color="'info'" type="submit" wire:click="updateTask({{$id}})">{{ __('admin.save') }}</x-admin.button>
         @else
-            <x-admin.button :color="'info'" type="submit" wire:click="saveTask">{{ __('admin.save') }}</x-admin.button>
+            <x-admin.button :color="'info'" type="submit" wire:click="save">{{ __('admin.save') }}</x-admin.button>
         @endif
     </x-slot>
 

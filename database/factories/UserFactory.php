@@ -54,6 +54,19 @@ class UserFactory extends Factory
     {
         return $this->afterCreating(function (User $user) {
 
+            // Role for super-admin
+            if ($user->email === 'artdecomplus@gmail.com') {
+                $user->assignRole('super-admin');
+                return;
+            }
+
+            // Role for admin
+            if ($user->email === 'sergsat84@yahoo.com') {
+                $user->assignRole('admin');
+                return;
+            }
+
+            // Roles for other users
             $roles = ['manager', 'hr', 'employee'];
 
             $role = Role::whereIn('name', $roles)->inRandomOrder()->first();

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\QualificationCategory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,11 +16,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-//            DashboardTableSeeder::class,
-            // App seeders
             RolePermissionSeeder::class,
             UserSeeder::class,
-            TaskSeeder::class
+            TaskSeeder::class,
+            NewsSeeder::class,
+            PollSeeder::class,
+            QualificationCategorySeeder::class,
+            QualificationSeeder::class,
+            ProfessionSeeder::class,
         ]);
     }
 }

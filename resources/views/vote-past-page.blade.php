@@ -11,7 +11,7 @@
 
         {{-- Link to Tests --}}
         <div class="flex items-center self-start gap-2">
-            <a href="{{ route('vote') }}" class="inline-flex items-center group">
+            <a href="{{ route('vote-page') }}" class="inline-flex items-center group">
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"
                     class="w-4 h-4 group-hover:opacity-60">
                     <path

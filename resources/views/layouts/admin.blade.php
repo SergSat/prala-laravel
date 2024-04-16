@@ -13,8 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap" rel="stylesheet" />
 
+{{--    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>--}}
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.3.0/classic/ckeditor.js"></script>
 
     <!-- Styles -->
     @livewireStyles
@@ -47,6 +50,7 @@
     <div class="flex h-[100dvh] overflow-hidden">
 
         @include('parts.admin.sidebar')
+
         <!-- Content area -->
         <div class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden @if($attributes['background']){{ $attributes['background'] }}@endif"
             x-ref="contentarea">
@@ -54,16 +58,9 @@
             @include('parts.admin.header')
 
             <livewire:notifications />
-{{--            @if (session('notifications'))--}}
-{{--                @foreach (session('notifications') as $notification)--}}
-{{--                    <livewire:alert :type="$notification['type']">--}}
-{{--                        {{$notification['message']}}--}}
-{{--                    </livewire:alert>--}}
-{{--                @endforeach--}}
-{{--            @endif--}}
 
             <main class="grow">
-                <!-- Page Heading -->
+
                 @if (isset($header))
                 <header class="bg-white shadow dark:bg-gray-800">
                     <div class="px-4 py-6 sm:px-6 lg:px-8">
@@ -72,9 +69,10 @@
                 </header>
                 @endif
 
-                <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
+                <div class="px-4 py-6 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
                     {{ $slot }}
                 </div>
+
             </main>
 
         </div>
@@ -85,6 +83,7 @@
     @include('parts.modal')
 
     @livewireScripts
+
 </body>
 
 </html>

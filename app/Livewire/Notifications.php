@@ -15,7 +15,6 @@ class Notifications extends Component
         //
     }
 
-
     #[On('notify')]
     public function addNotification($status, $message)
     {

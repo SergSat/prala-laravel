@@ -34,7 +34,7 @@
         @if ($id)
             <x-admin.button :color="'info'" type="submit" wire:click="updateRole({{$id}})">{{ __('admin.save') }}</x-admin.button>
         @else
-            <x-admin.button :color="'info'" type="submit" wire:click="saveRole">{{ __('admin.save') }}</x-admin.button>
+            <x-admin.button :color="'info'" type="submit" wire:click="save">{{ __('admin.save') }}</x-admin.button>
         @endif
     </x-slot>
 
