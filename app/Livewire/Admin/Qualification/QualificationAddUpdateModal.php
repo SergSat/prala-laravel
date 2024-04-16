@@ -35,7 +35,7 @@ class QualificationAddUpdateModal extends Component
     public function showCreate(): void
     {
         $this->resetInput();
-
+        $this->dispatch('init-editor');
         $this->show = true;
     }
 
@@ -55,6 +55,7 @@ class QualificationAddUpdateModal extends Component
 
         $this->content = $qualification->content;
         $this->currentImagePath = $qualification->image_path ?? null;
+
         $this->dispatch('init-editor');
         $this->show = true;
     }

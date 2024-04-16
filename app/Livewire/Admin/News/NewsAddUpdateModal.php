@@ -20,7 +20,6 @@ class NewsAddUpdateModal extends Component
 
     public $show = false;
 
-    public $trixId;
     public $id = null;
     public $title = null;
     public $content = null;
@@ -36,14 +35,13 @@ class NewsAddUpdateModal extends Component
     public function showCreate(): void
     {
         $this->resetInput();
-
+        $this->dispatch('init-editor');
         $this->show = true;
     }
 
     #[On('news-edit')]
     public function showEdit($id)
     {
-        $this->trixId = uniqid();
         $this->resetInput();
 
         $news = News::find($id);
@@ -85,8 +83,7 @@ class NewsAddUpdateModal extends Component
             $created_news->save();
         }
 
-        // Close modal and reset input fields
-        $this->resetInput();
+        // Close modal
         $this->show = false;
 
         // Update component
