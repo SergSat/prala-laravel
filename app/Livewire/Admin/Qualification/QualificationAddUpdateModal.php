@@ -17,7 +17,6 @@ class QualificationAddUpdateModal extends Component
 
     public $show = false;
 
-    public $trixId;
     public $id = null;
     public $title = null;
     public $categoryId = null;
@@ -42,7 +41,6 @@ class QualificationAddUpdateModal extends Component
     #[On('qualification-edit')]
     public function showEdit($id)
     {
-        $this->trixId = uniqid();
         $this->resetInput();
 
         $qualification = Qualification::find($id);
