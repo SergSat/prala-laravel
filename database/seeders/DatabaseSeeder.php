@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder
             QualificationCategorySeeder::class,
             QualificationSeeder::class,
             ProfessionSeeder::class,
+            MaterialCategorySeeder::class,
+            MaterialSeeder::class,
         ]);
     }
 }

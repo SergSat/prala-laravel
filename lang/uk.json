@@ -2,6 +2,7 @@
   "home": "Головна",
   "login_title": "Вхід",
   "login": "Логін",
+  "logout": "Вийти",
   "your_email": "Ваш Email",
   "dont_have_account": "У вас немає аккаунту?",
   "sign_up": "Зареєструватися",
@@ -29,15 +30,22 @@
   "to": "по",
   "of": "з",
   "results": "результатів",
-
+  "management": "Управління",
   "status": "Статус",
   "completed": "Завершено",
   "pending": "В очікуванні",
+  "title": "Назва",
+  "save": "Зберегти",
 
   "tasks": "Завдання",
+  "add_task": "Додати завдання",
   "my_tasks": "Мої завдання",
   "my_tasks_studies_and_news": "Мої завдання, навчання та новини",
   "confirm_change_task_status": "Ви впевнені, що хочете змінити статус завдання?",
+  "confirm_delete_task": "Ви впевнені, що хочете видалити завдання?",
+  "currently_tasks_are_missing": "На даний момент завдання відсутні",
+  "task_successfully_added": "Завдання успішно додано",
+  "task_failed_to_add": "Не вдалося додати завдання",
 
   "studies": "Навчання",
 
@@ -53,8 +61,13 @@
   "finished": "Завершено",
 
   "profession": "Професія",
+  "professions": "Професії",
 
+  "library": "Бібліотека",
+
+  "employee": "Співробітник",
   "employees": "Співробітники",
+  "all_employees": "Всі співробітники",
   "count_employees": "Cпівробітників",
   "employees_list_with_contacts": "Список співробітників з контактами",
   "employees_with_profession": "Співробітники з професією",

@@ -1,7 +1,7 @@
 @props(['category', 'currentCategory'])
 
 <div class="flex items-center">
-    @if ($category->parent_id === null)
+    @if ($category->parent_id === null && !empty($category->profession))
         <span class="text-gray-500 font-bold pe-2">{{ __('profession') }}: </span>
     @endif
     <button wire:click="$dispatch('set-category', {categoryId: {{$category->id}} })"

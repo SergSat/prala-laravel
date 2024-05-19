@@ -88,4 +88,14 @@ class User extends Authenticatable
     {
         return $this->professions->pluck('name')->join(', ');
     }
+
+    /**
+     * Get the user's tasks
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
 }

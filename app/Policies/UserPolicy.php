@@ -12,7 +12,7 @@ class UserPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return $user->hasAnyRole(['admin', 'super-admin', 'manager', 'hr']);
     }
 
     /**
@@ -20,7 +20,7 @@ class UserPolicy
      */
     public function view(User $user, User $model): bool
     {
-        //
+        return $user->hasAnyRole(['admin', 'super-admin', 'manager']);
     }
 
     /**
@@ -28,7 +28,7 @@ class UserPolicy
      */
     public function create(User $user): bool
     {
-        return $user->hasPermissionTo('delete task');
+        return $user->hasPermissionTo('create user');
     }
 
     /**
@@ -69,5 +69,13 @@ class UserPolicy
     public function forceDelete(User $user, User $model): bool
     {
         //
+    }
+
+    /**
+     * Determine whether the user can view the model.
+     */
+    public function viewDetail(User $user, User $model)
+    {
+        return $user->hasAnyRole(['admin', 'super-admin', 'manager']);
     }
 }

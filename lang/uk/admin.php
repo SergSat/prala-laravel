@@ -59,6 +59,15 @@ return [
     "add_profession" => "Додати професію",
     "edit_profession" => "Редагувати професію",
 
+    // Materials
+    "materials" => "Матеріали",
+    "add_material" => "Додати матеріал",
+    "edit_material" => "Редагувати матеріал",
+    "library" => "Бібліотека",
+    "categories_library" => "Категорії бібліотеки",
+    "edit_material_category" => "Редагувати категорію матеріалів",
+    "add_material_category" => "Додати категорію матеріалів",
+
     // Role
     "role" => "Роль",
     "roles" => "Ролі",
@@ -98,6 +107,7 @@ return [
     "description" => "Опис",
     "read_more" => "Читати далі",
     "back_to_list" => "Повернутися до списку",
+    "admin_panel" => "Адмін панель",
 
     // Slogans
     "hello" => "Привіт",

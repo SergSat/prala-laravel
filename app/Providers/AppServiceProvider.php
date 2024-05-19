@@ -3,10 +3,12 @@
 namespace App\Providers;
 
 use App\Helpers\HtmlPurifierHelper;
+use App\Models\MaterialCategory;
 use App\Models\News;
 use App\Models\Poll;
 use App\Models\QualificationCategory;
 use App\Models\User;
+use App\Observers\MaterialCategoryObserver;
 use App\Observers\NewsObserver;
 use App\Observers\PollObserver;
 use App\Observers\QualificationCategoryObserver;
@@ -40,5 +42,6 @@ class AppServiceProvider extends ServiceProvider
         News::observe(NewsObserver::class);
         Poll::observe(PollObserver::class);
         QualificationCategory::observe(QualificationCategoryObserver::class);
+        MaterialCategory::observe(MaterialCategoryObserver::class);
     }
 }

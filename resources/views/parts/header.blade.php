@@ -64,7 +64,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="{{ route('library-page') }}"
+					<a href="{{ route('library.index') }}"
 						class="w-full hover:opacity-60  inline-flex items-center gap-2.5">
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd"
@@ -143,14 +143,9 @@
 					</a>
 				</li>
 				<li>
-					<a href="{{ route('library-page') }}"
-					   class="whitespace-nowrap">
-						Бібліотека
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						Налаштування
+					<a href="{{ route('library.index') }}"
+					   class="{{ request()->routeIs('library.*') ? '--pr-active' : '' }} whitespace-nowrap hover:text-pr-blue">
+						{{ __('library') }}
 					</a>
 				</li>
 				<li>
@@ -159,12 +154,14 @@
 						{{ __('polls') }}
 					</a>
 				</li>
-				<li>
-					<a href="{{ route('professions.index') }}"
-					   class="{{ request()->routeIs('professions.*') ? '--pr-active' : '' }} whitespace-nowrap hover:text-pr-blue">
-						{{ __('Hr') }}
-					</a>
-				</li>
+				@can ('viewAny', App\Models\User::class)
+					<li>
+						<a href="{{ route('professions.index') }}"
+						   class="{{ request()->routeIs('professions.*') ? '--pr-active' : '' }} whitespace-nowrap hover:text-pr-blue">
+							{{ auth()->user()->hasRole('hr') ? __('Hr') : __('management') }}
+						</a>
+					</li>
+				@endcan
 				<li>
 					<a href="{{ route('news.index') }}"
 					   class="{{ request()->routeIs('news.index') ? '--pr-active' : '' }} whitespace-nowrap hover:text-pr-blue">

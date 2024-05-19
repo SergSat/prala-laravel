@@ -10,14 +10,22 @@
             @if ($users && $users->count() > 0)
                 @foreach($users as $user)
                     <div class="min-w-[210px] max-w-72 flex flex-col items-center w-full gap-3 p-5 bg-white border rounded-lg sm:gap-5 border-pr-gray-sky">
-                        <a href="{{ route('staff-employee') }}" class="flex flex-col items-center gap-3">
+                    @can('view', auth()->user(), $user)
+                        <a href="{{ route('employee.show', $user->id) }}" class="flex flex-col items-center gap-3">
+                    @else
+                        <div class="flex flex-col items-center gap-3">
+                    @endcan
                             <picture>
                                 <img src="{{ $user->profile_photo_url }}" alt="avatar" class="w-24 h-24 object-cover rounded-full">
                             </picture>
                             <div class="text-center">
                                 <h3 class="text-2xl">{{ $user->name }}</h3>
                             </div>
+                    @can('view', auth()->user(), $user)
                         </a>
+                    @else
+                        </div>
+                    @endcan
                         <div class="flex flex-col items-center text-center text-pr-gray-sky max-w-full">
                             <a href="mailto:{{ $user->email }}" class="max-w-full break-words">{{ $user->email }}</a>
                         </div>

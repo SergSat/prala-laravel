@@ -29,6 +29,28 @@
 					@endif
 				@endfor
 			</div>
+
+			<div>
+				@if($user->hasAnyRole('super-admin', 'admin', 'manager'))
+					<a href="{{ route('admin.dashboard') }}"
+					   class="flex items-center px-3 py-1 mt-2 text-sm font-medium text-pr-blue">
+						{{ __('admin.admin_panel') }}
+					</a>
+				@endif
+				<form method="POST" action="{{ route('logout') }}" x-data>
+					@csrf
+					<a class="flex items-center px-3 py-1 mt-2 gap-2 text-sm font-medium text-pr-blue"
+					   href="{{ route('logout') }}" @click.prevent="$root.submit();" @focus="open = true"
+					   @focusout="open = false">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-auto fill-pr-blue" id="sign-out-alt">
+							<path fill="currentColor"
+								  d="M12.59,13l-2.3,2.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l4-4a1,1,0,0,0,.21-.33,1,1,0,0,0,0-.76,1,1,0,0,0-.21-.33l-4-4a1,1,0,1,0-1.42,1.42L12.59,11H3a1,1,0,0,0,0,2ZM12,2A10,10,0,0,0,3,7.55a1,1,0,0,0,1.8.9A8,8,0,1,1,12,20a7.93,7.93,0,0,1-7.16-4.45,1,1,0,0,0-1.8.9A10,10,0,1,0,12,2Z"></path>
+						</svg>
+						{{ __('admin.sign_out') }}
+					</a>
+				</form>
+			</div>
+
 		</div>
 	</section>
 

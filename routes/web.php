@@ -20,8 +20,10 @@ Route::fallback(function() {
 });
 
 Route::post('/logout', function () {
-    request()->session()->invalidate();
-    \Illuminate\Support\Facades\Auth::logout();
+    auth()->logout();
+
+    session()->invalidate();
+    session()->regenerateToken();
     return redirect('/');
 })->name('logout');
 
@@ -44,7 +46,8 @@ Route::middleware(['auth', 'auth.session', 'verified'])->group(function () {
         Route::get('/qualifications', \App\Livewire\Admin\Qualification\QualificationsManager::class)->name('admin.qualifications.index');
         Route::get('/category-qualifications', \App\Livewire\Admin\QualificationCategory\QualificationCategoriesManager::class)->name('admin.category_qualifications.index');
         Route::get('/professions', \App\Livewire\Admin\Profession\ProfessionsManager::class)->name('admin.professions.index');
-
+        Route::get('/materials', \App\Livewire\Admin\Material\MaterialsManager::class)->name('admin.materials.index');
+        Route::get('/category-materials', \App\Livewire\Admin\MaterialCategory\MaterialCategoriesManager::class)->name('admin.category_materials.index');
     });
 
     // Public pages routes
@@ -56,8 +59,17 @@ Route::middleware(['auth', 'auth.session', 'verified'])->group(function () {
     Route::get('/blog/{id}', \App\Livewire\Pages\News\NewsPageShow::class)->name('news.show');
     Route::get('/responsibilities-and-competencies/{categoryId?}', \App\Livewire\Pages\Qualification\QualificationPageIndex::class)->name('responsibilities.index');
     Route::get('/responsibilities-and-competencies/detail/{id}', \App\Livewire\Pages\Qualification\QualificationPageShow::class)->name('responsibilities.show');
-    Route::get('/professions', \App\Livewire\Pages\Profession\ProfessionPageIndex::class)->name('professions.index');
-    Route::get('/professions/{id}', \App\Livewire\Pages\Profession\ProfessionPageShow::class)->name('professions.show');
+    Route::get('/library/{categoryId?}', \App\Livewire\Pages\Material\MaterialPageIndex::class)->name('library.index');
+    Route::get('/library/detail/{id}', \App\Livewire\Pages\Material\MaterialPageShow::class)->name('library.show');
+    Route::get('/professions', \App\Livewire\Pages\Profession\ProfessionPageIndex::class)
+        ->name('professions.index')
+        ->middleware('can:viewAny,App\Models\User');
+    Route::get('/professions/{id}', \App\Livewire\Pages\Profession\ProfessionPageShow::class)
+        ->name('professions.show')
+        ->middleware('can:viewAny,App\Models\User');
+    Route::get('/employee/{id}', \App\Livewire\Pages\Employee\EmployeePageShow::class)
+        ->name('employee.show')
+        ->middleware(['can:view,user']);
 
     // Our routes
     Route::get('/home-manager', function () {

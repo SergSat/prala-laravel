@@ -6,26 +6,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-class Qualification extends Model
+class Material extends Model
 {
+    use HasFactory;
+
+    protected $fillable = ['title', 'content', 'material_category_id'];
+
     /**
      * The attributes that are mass assignable.
      *
-     * @var array
+     * @var array<int, string>
      */
-    protected $fillable = [
-        'title', 'content', 'image_path', 'qualification_category_id'
-    ];
-
-    use HasFactory;
-
-    /**
-     * Get the category for the qualification
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function qualificationCategory() {
-        return $this->belongsTo(QualificationCategory::class, 'qualification_category_id');
+    public function category()
+    {
+        return $this->belongsTo(MaterialCategory::class, 'material_category_id');
     }
 
     /**
@@ -35,7 +29,7 @@ class Qualification extends Model
      */
     public function getCategoryPathNameAttribute() {
         $names = [];
-        $category = $this->qualificationCategory;
+        $category = $this->category;
 
         while ($category) {
             array_unshift($names, $category->name);
@@ -56,5 +50,4 @@ class Qualification extends Model
         $content = cleanAllHtml($this->content);
         return strlen($content) > $limit ? Str::limit($content, $limit) : $content;
     }
-
 }
